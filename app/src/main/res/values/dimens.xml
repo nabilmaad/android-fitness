@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="signupHeader_topMargin">55dp</dimen>
+    <dimen name="signupHeader_size">50dp</dimen>
+
+    <dimen name="signupDistanceBetweenCloudAndQuestion">30dp</dimen>
+    <dimen name="signupQuestions_size">26dp</dimen>
+    <dimen name="signupSideMargin">10dp</dimen>
+    <dimen name="signupDistanceBetweenQuestionAndAnswer">10dp</dimen>
+
+    <dimen name="signupEditTextHeight">30dp</dimen>
+
+    <dimen name="signupNextTextSize">30dp</dimen>
+    <dimen name="signupNextHeight">50dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+</resources>

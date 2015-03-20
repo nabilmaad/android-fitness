@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">AndroidFitness</string>
+
+    <string name="title_activity_signup_step1">SignupStep1</string>
+    <string name="title_activity_signup_step2">SignupStep2</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Added by us -->
+    <string name="nameHint"><i> i.e. John</i></string>
+    <string name="signupNext">Next &gt;</string>
+    <string name="title_activity_signup_step3">SignupStep3</string>
+
 </resources>

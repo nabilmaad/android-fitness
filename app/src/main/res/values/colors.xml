@@ -1,0 +1,9 @@
+<resources>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="background">#0ba4d0</color>
+    <color name="signupHeader">#000000</color>
+    <color name="signupText">#ffffff</color>
+    <color name="signupNext">#dd0000</color>
+
+</resources>
