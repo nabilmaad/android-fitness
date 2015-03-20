@@ -68,7 +68,7 @@
                     android:inputType="textPersonName"
                     android:hint="@string/nameHint"
                     android:textColorHint="#a9a9a9"
-                    android:textColor="#000000"
+                    android:textColor="@color/signupInputFields"
                     android:ems="15"
                     android:id="@+id/name"
                     android:background="@drawable/edit_text_design"/>

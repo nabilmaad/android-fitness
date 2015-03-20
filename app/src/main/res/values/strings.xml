@@ -10,5 +10,6 @@
     <string name="nameHint"><i> i.e. John</i></string>
     <string name="signupNext">Next &gt;</string>
     <string name="title_activity_signup_step3">SignupStep3</string>
+    <string name="title_activity_signup_step4">SignupStep4</string>
 
 </resources>

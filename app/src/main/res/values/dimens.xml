@@ -8,7 +8,7 @@
     <dimen name="signupSideMargin">10dp</dimen>
     <dimen name="signupDistanceBetweenQuestionAndAnswer">10dp</dimen>
 
-    <dimen name="signupEditTextHeight">30dp</dimen>
+    <dimen name="signupEditTextHeight">50dp</dimen>
 
     <dimen name="signupNextTextSize">30dp</dimen>
     <dimen name="signupNextHeight">50dp</dimen>
