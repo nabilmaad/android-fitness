@@ -67,7 +67,7 @@
                     android:layout_marginTop="@dimen/signupDistanceBetweenQuestionAndAnswer"
                     android:inputType="textPersonName"
                     android:hint="@string/nameHint"
-                    android:textColorHint="#a9a9a9"
+                    android:textColorHint="@color/signupInputHint"
                     android:textColor="@color/signupInputFields"
                     android:ems="15"
                     android:id="@+id/name"

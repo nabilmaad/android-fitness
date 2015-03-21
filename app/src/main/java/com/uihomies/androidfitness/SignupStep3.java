@@ -61,9 +61,8 @@ public class SignupStep3 extends ActionBarActivity {
                 if(day.getText().toString().length()==2)
                 {
                     // Error handling
-                    if(!day.getText().toString().matches("[0-9][0-9]") ||
-                            Integer.parseInt(day.getText().toString()) < 1 ||
-                                Integer.parseInt(day.getText().toString()) > 31)
+                    if(Integer.parseInt(day.getText().toString()) < 1 ||
+                            Integer.parseInt(day.getText().toString()) > 31)
                         day.setError(dayError);
                     else
                         month.requestFocus();
@@ -87,9 +86,8 @@ public class SignupStep3 extends ActionBarActivity {
                 if(month.getText().toString().length()==2)
                 {
                     // Error handling
-                    if(!month.getText().toString().matches("[0-9][0-9]") ||
-                            Integer.parseInt(month.getText().toString()) < 1 ||
-                                Integer.parseInt(month.getText().toString()) > 12)
+                    if(Integer.parseInt(month.getText().toString()) < 1 ||
+                            Integer.parseInt(month.getText().toString()) > 12)
                         month.setError(monthError);
                     else
                         year.requestFocus();
@@ -113,9 +111,8 @@ public class SignupStep3 extends ActionBarActivity {
                 if(year.getText().toString().length()==4)
                 {
                     // Error handling
-                    if(!year.getText().toString().matches("[0-9][0-9][0-9][0-9]") ||
-                            Integer.parseInt(year.getText().toString()) < (currentYear- 100) ||
-                                Integer.parseInt(year.getText().toString()) > currentYear)
+                    if(Integer.parseInt(year.getText().toString()) < (currentYear- 100) ||
+                            Integer.parseInt(year.getText().toString()) > currentYear)
                         year.setError(yearError);
                     else {
                         InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
@@ -168,16 +165,16 @@ public class SignupStep3 extends ActionBarActivity {
 
         // Error handling
         boolean valid = true;
-        if(dayString.length() == 0 || dayString.equals("0")) {
+        if(dayString.length() <= 0 || dayString.equals("0")) {
             day.setError(dayError);
             valid = false;
         }
-        if(monthString.length() == 0 || monthString.equals("0")) {
+        if(monthString.length() <= 0 || monthString.equals("0")) {
             month.setError(monthError);
             valid = false;
         }
-        if(yearString.length() == 0 || yearString.equals("0")) {
-            year.setError(monthError);
+        if(yearString.length() <= 0 || yearString.equals("0")) {
+            year.setError(yearError);
             valid = false;
         }
 

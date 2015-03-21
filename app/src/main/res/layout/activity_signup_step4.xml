@@ -61,16 +61,56 @@
                     android:id="@+id/weightLabel"
                     />
 
-                <LinearLayout
+                <RelativeLayout
                     android:orientation="horizontal"
-                    android:layout_width="fill_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:weightSum="1"
                     android:layout_marginTop="@dimen/signupDistanceBetweenQuestionAndAnswer">
 
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/signupEditTextHeight"
+                        android:layout_alignParentLeft="true"
+                        android:inputType="number"
+                        android:hint="@string/weightHint"
+                        android:textColorHint="#a9a9a9"
+                        android:textColor="@color/signupInputFields"
+                        android:ems="8"
+                        android:maxLength="3"
+                        android:id="@+id/weight"
+                        android:background="@drawable/edit_text_design"/>
 
+                    <TextView
+                        android:id="@+id/kgLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="110dp"
+                        android:textSize="30dp"
+                        android:text="Kg"
+                        android:textColor="@color/signupText"/>
 
-                </LinearLayout>
+                    <Switch
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:switchMinWidth="56dp"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="50dp"
+                        android:id="@+id/weightSwitch" />
+
+                    <TextView
+                        android:id="@+id/lbsLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentRight="true"
+                        android:textSize="30dp"
+                        android:text="Lbs"
+                        android:textColor="@color/signupText"/>
+
+                </RelativeLayout>
 
             </LinearLayout>
 
@@ -92,7 +132,8 @@
                     android:background="@color/signupNext"
                     android:textSize="@dimen/signupNextTextSize"
                     android:textColor="@color/signupText"
-                    android:text="@string/signupNext"/>
+                    android:text="@string/signupNext"
+                    android:onClick="nextButtonClick"/>
             </LinearLayout>
 
         </LinearLayout>

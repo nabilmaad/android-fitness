@@ -1,15 +1,20 @@
 <resources>
     <string name="app_name">AndroidFitness</string>
 
-    <string name="title_activity_signup_step1">SignupStep1</string>
-    <string name="title_activity_signup_step2">SignupStep2</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
-
     <!-- Added by us -->
     <string name="nameHint"><i> i.e. John</i></string>
+    <string name="weightHint"><i> i.e. 100</i></string>
     <string name="signupNext">Next &gt;</string>
+    <string name="signupDone">Done</string>
+
+    <!-- Added by the system -->
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_signup_step1">SignupStep1</string>
+    <string name="title_activity_signup_step2">SignupStep2</string>
     <string name="title_activity_signup_step3">SignupStep3</string>
     <string name="title_activity_signup_step4">SignupStep4</string>
+    <string name="title_activity_signup_step5">SignupStep5</string>
+    <string name="title_activity_signup_step6">SignupStep6</string>
 
 </resources>

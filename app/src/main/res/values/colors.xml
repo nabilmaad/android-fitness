@@ -6,5 +6,6 @@
     <color name="signupText">#ffffff</color>
     <color name="signupNext">#dd0000</color>
     <color name="signupInputFields">#000000</color>
-
+    <color name="signupInputHint">#a9a9a9</color>
+    <color name="signupAudioHint">#d4d4d1</color>
 </resources>

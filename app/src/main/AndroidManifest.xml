@@ -11,6 +11,10 @@
             android:name=".SignupStep1"
             android:label="@string/title_activity_signup_step1"
             android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".SignupStep2"
@@ -21,15 +25,20 @@
             android:name=".SignupStep3"
             android:label="@string/title_activity_signup_step3"
             android:screenOrientation="portrait" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".SignupStep4"
             android:label="@string/title_activity_signup_step4"
             android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".SignupStep5"
+            android:label="@string/title_activity_signup_step5"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".SignupStep6"
+            android:label="@string/title_activity_signup_step6" >
         </activity>
     </application>
 

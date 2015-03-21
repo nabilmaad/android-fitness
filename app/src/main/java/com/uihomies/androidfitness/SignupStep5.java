@@ -12,19 +12,16 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import com.uihomies.androidfitness.R;
 
-public class SignupStep2 extends ActionBarActivity {
+public class SignupStep5 extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_signup_step2);
-
-        // Setting the fonts
+        setContentView(R.layout.activity_signup_step5);
 
         // Sign up header
         TextView tv1=(TextView)findViewById(R.id.signupTitle);
@@ -32,7 +29,7 @@ public class SignupStep2 extends ActionBarActivity {
         tv1.setTypeface(face1);
 
         // Sign up question
-        TextView tv2=(TextView)findViewById(R.id.genderLabel);
+        TextView tv2=(TextView)findViewById(R.id.athleticLevelLabel);
         Typeface face2=Typeface.createFromAsset(getAssets(),"fonts/Marker_Felt.ttf");
         tv2.setTypeface(face2);
 
@@ -46,7 +43,7 @@ public class SignupStep2 extends ActionBarActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_signup_step2, menu);
+        getMenuInflater().inflate(R.menu.menu_signup_step5, menu);
         return true;
     }
 
@@ -65,68 +62,68 @@ public class SignupStep2 extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void maleButtonClick(View view) {
-        Button maleButton = (Button) findViewById(R.id.maleButton);
-        maleButton.setActivated(true);
+    public void beginnerButtonClick(View view) {
+        Button beginnerButton = (Button) findViewById(R.id.beginnerButton);
+        beginnerButton.setActivated(true);
 
         // Deactivate the other 2
-        Button femaleButton = (Button) findViewById(R.id.femaleButton);
-        Button noneButton = (Button) findViewById(R.id.noneButton);
-        femaleButton.setActivated(false);
-        noneButton.setActivated(false);
+        Button averageButton = (Button) findViewById(R.id.averageButton);
+        Button athleticButton = (Button) findViewById(R.id.athleticButton);
+        averageButton.setActivated(false);
+        athleticButton.setActivated(false);
     }
 
-    public void femaleButtonClick(View view) {
-        Button femaleButton = (Button) findViewById(R.id.femaleButton);
-        femaleButton.setActivated(true);
+    public void averageButtonClick(View view) {
+        Button averageButton = (Button) findViewById(R.id.averageButton);
+        averageButton.setActivated(true);
 
         // Deactivate the other 2
-        Button maleButton = (Button) findViewById(R.id.maleButton);
-        Button noneButton = (Button) findViewById(R.id.noneButton);
-        maleButton.setActivated(false);
-        noneButton.setActivated(false);
+        Button beginnerButton = (Button) findViewById(R.id.beginnerButton);
+        Button athleticButton = (Button) findViewById(R.id.athleticButton);
+        beginnerButton.setActivated(false);
+        athleticButton.setActivated(false);
     }
 
-    public void noneButtonClick(View view) {
-        Button noneButton = (Button) findViewById(R.id.noneButton);
-        noneButton.setActivated(true);
+    public void athleticButtonClick(View view) {
+        Button athleticButton = (Button) findViewById(R.id.athleticButton);
+        athleticButton.setActivated(true);
 
         // Deactivate the other 2
-        Button maleButton = (Button) findViewById(R.id.maleButton);
-        Button femaleButton = (Button) findViewById(R.id.femaleButton);
-        maleButton.setActivated(false);
-        femaleButton.setActivated(false);
+        Button beginnerButton = (Button) findViewById(R.id.beginnerButton);
+        Button averageButton = (Button) findViewById(R.id.averageButton);
+        beginnerButton.setActivated(false);
+        averageButton.setActivated(false);
     }
 
     public void nextButtonClick(View view) {
-        int gender = 0;
+        int athleticLevel = 0;
 
-        // Male
-        Button maleButton = (Button) findViewById(R.id.maleButton);
-        if(maleButton.isActivated())
-            gender = 1;
+        // Beginner
+        Button beginnerButton = (Button) findViewById(R.id.beginnerButton);
+        if(beginnerButton.isActivated())
+            athleticLevel = 1;
         else {
-            // Female
-            Button femaleButton = (Button) findViewById(R.id.femaleButton);
-            if(femaleButton.isActivated())
-                gender = 2;
+            // Average
+            Button averageButton = (Button) findViewById(R.id.averageButton);
+            if(averageButton.isActivated())
+                athleticLevel = 2;
             else {
-                // None
-                Button noneButton = (Button) findViewById(R.id.noneButton);
-                if(noneButton.isActivated())
-                    gender = 3;
+                // Athletic
+                Button athleticButton = (Button) findViewById(R.id.athleticButton);
+                if(athleticButton.isActivated())
+                    athleticLevel = 3;
             }
         }
 
         // Error handling
         boolean valid = true;
-        if(gender == 0) {
+        if(athleticLevel == 0) {
             valid = false;
 
             // Show alert
             new AlertDialog.Builder(this)
-                    .setTitle("Select Gender")
-                    .setMessage("You must select a gender to continue.")
+                    .setTitle("Select Athletic Level")
+                    .setMessage("You must select an athletic level to continue.")
                     .setNegativeButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             // do nothing
@@ -140,13 +137,11 @@ public class SignupStep2 extends ActionBarActivity {
             // Save user's gender
             SharedPreferences sharedpreferences = getSharedPreferences("appPreferences", Context.MODE_PRIVATE);
             SharedPreferences.Editor editor = sharedpreferences.edit();
-            editor.putInt("userGender", gender);
+            editor.putInt("userAthleticLevel", athleticLevel);
             editor.commit();
 
-            System.out.println(sharedpreferences.getInt("userGender", 0));
-
             // Load next activity
-            Intent intent = new Intent(SignupStep2.this, SignupStep3.class);
+            Intent intent = new Intent(SignupStep5.this, SignupStep6.class);
             startActivity(intent);
         }
     }

@@ -1,15 +1,25 @@
 package com.uihomies.androidfitness;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import com.uihomies.androidfitness.R;
 
+import java.util.Calendar;
+
 public class SignupStep4 extends ActionBarActivity {
+
+    private final static String weightError = "Weight must be a number between 10 and 999";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,5 +65,35 @@ public class SignupStep4 extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void nextButtonClick(View view) {
+        EditText weight = (EditText)findViewById(R.id.weight);
+        Switch weightSwitch = (Switch)findViewById(R.id.weightSwitch);
+
+        String weightString = weight.getText().toString();
+
+        // Error handling
+        boolean valid = true;
+        if(weightString.length() <= 1 ||
+                weightString.equals("0")) {
+            weight.setError(weightError);
+            valid = false;
+        }
+
+        if(valid) {
+            // Save user's weight in Kg
+            SharedPreferences sharedpreferences = getSharedPreferences("appPreferences", Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedpreferences.edit();
+            if(!weightSwitch.isChecked()) // Already in Kg
+                editor.putInt("userWeight", Integer.parseInt(weightString));
+            else // Convert Lbs to Kg
+                editor.putInt("userWeight", (int)(Double.parseDouble(weightString) / 2.2));
+            editor.commit();
+
+            // Load next activity
+            Intent intent = new Intent(SignupStep4.this, SignupStep5.class);
+            startActivity(intent);
+        }
     }
 }
