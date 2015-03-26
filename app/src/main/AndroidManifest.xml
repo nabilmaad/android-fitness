@@ -45,6 +45,10 @@
             android:name=".Game"
             android:label="@string/title_activity_game" >
         </activity>
+        <activity
+            android:name=".Summary"
+            android:label="@string/title_activity_summary" >
+        </activity>
     </application>
 
 </manifest>

@@ -19,5 +19,7 @@
     <string name="title_activity_signup_step5">SignupStep5</string>
     <string name="title_activity_signup_step6">SignupStep6</string>
     <string name="title_activity_game">Game</string>
+    <string name="title_activity_summary">Summary</string>
+
 
 </resources>
