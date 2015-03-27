@@ -39,7 +39,6 @@
             android:layout_marginTop="@dimen/signupHeader_topMargin"
             android:layout_centerHorizontal="true"
             android:textSize="@dimen/signupHeader_size"
-            android:text="Profile"
             android:textColor="@color/signupHeader" />
     </RelativeLayout>
 
@@ -51,28 +50,100 @@
             android:layout_marginLeft="@dimen/signupSideMargin"
             android:layout_marginRight="@dimen/signupSideMargin">
 
-            <TextView
+
+            <TableLayout
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/signupDistanceBetweenCloudAndQuestion"
-                android:textColor="@color/signupText"
-                android:textSize="@dimen/signupQuestions_size"
-                android:text="What is your name?"
-                android:id="@+id/nameLabel"
-                />
+                android:layout_height="fill_parent"
+                android:stretchColumns="*">
 
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/signupEditTextHeight"
-                android:layout_marginTop="@dimen/signupDistanceBetweenQuestionAndAnswer"
-                android:inputType="textPersonName"
-                android:hint="@string/nameHint"
-                android:textColorHint="@color/signupInputHint"
-                android:textColor="@color/signupInputFields"
-                android:ems="15"
-                android:id="@+id/name"
-                android:background="@drawable/edit_text_design"/>
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/signupDistanceBetweenCloudAndQuestion"
+                        android:textColor="@color/signupText"
+                        android:textSize="@dimen/signupQuestions_size"
+                        android:text="Gender"
+                        android:id="@+id/genderLabel"
+                        />
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/signupDistanceBetweenCloudAndQuestion"
+                        android:textColor="@color/profileAnswers"
+                        android:textSize="@dimen/signupQuestions_size"
+                        android:id="@+id/genderAnswer"
+                        />
+                    </TableRow>
 
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/signupDistanceBetweenCloudAndQuestion"
+                        android:textColor="@color/signupText"
+                        android:textSize="@dimen/signupQuestions_size"
+                        android:text="Date of birth"
+                        android:id="@+id/dobLabel"
+                        />
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/signupDistanceBetweenCloudAndQuestion"
+                        android:textColor="@color/profileAnswers"
+                        android:textSize="@dimen/signupQuestions_size"
+                        android:id="@+id/dobAnswer"
+                        />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/signupDistanceBetweenCloudAndQuestion"
+                        android:textColor="@color/signupText"
+                        android:textSize="@dimen/signupQuestions_size"
+                        android:text="Weight"
+                        android:id="@+id/weightLabel"
+                        />
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/signupDistanceBetweenCloudAndQuestion"
+                        android:textColor="@color/profileAnswers"
+                        android:textSize="@dimen/signupQuestions_size"
+                        android:id="@+id/weightAnswer"
+                        />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/signupDistanceBetweenCloudAndQuestion"
+                        android:textColor="@color/signupText"
+                        android:textSize="@dimen/signupQuestions_size"
+                        android:text="Athletic level"
+                        android:id="@+id/athleticLevelLabel"
+                        />
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/signupDistanceBetweenCloudAndQuestion"
+                        android:textColor="@color/profileAnswers"
+                        android:textSize="@dimen/signupQuestions_size"
+                        android:id="@+id/athleticLevelAnswer"
+                        />
+                </TableRow>
+            </TableLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -94,7 +165,7 @@
                 android:textSize="@dimen/signupNextTextSize"
                 android:textColor="@color/signupText"
                 android:text="@string/editProfile"
-                android:onClick="nextButtonClick"/>
+                android:onClick="editButtonClick"/>
         </LinearLayout>
 
     </LinearLayout>

@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.uihomies.androidfitness.R;
@@ -48,6 +49,11 @@ public class SignupStep6 extends ActionBarActivity {
         TextView tv5=(TextView)findViewById(R.id.doneButton);
         Typeface face5=Typeface.createFromAsset(getAssets(),"fonts/DS_Marker_Felt.ttf");
         tv5.setTypeface(face5);
+
+        // Setting checkbox if already exists
+        SharedPreferences sharedpreferences = getSharedPreferences("appPreferences", Context.MODE_PRIVATE);
+        CheckBox checkbox=(CheckBox)findViewById(R.id.audioCheckbox);
+        checkbox.setChecked(sharedpreferences.getBoolean("audioFeedback", false));
     }
 
 
@@ -82,9 +88,8 @@ public class SignupStep6 extends ActionBarActivity {
         editor.putBoolean("audioFeedback", checkbox.isChecked());
         editor.commit();
 
-        // FIXME Go to home screen
         // Load next activity
-//        Intent intent = new Intent(SignupStep6.this, SignupStep6.class);
-//        startActivity(intent);
+        Intent intent = new Intent(SignupStep6.this, Profile.class);
+        startActivity(intent);
     }
 }

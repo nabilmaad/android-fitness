@@ -129,6 +129,20 @@ public class SignupStep3 extends ActionBarActivity {
                 // TODO Auto-generated method stub
             }
         });
+
+        // Setting dob if already exists, and header title
+        SharedPreferences sharedpreferences = getSharedPreferences("appPreferences", Context.MODE_PRIVATE);
+        if(sharedpreferences.getLong("userBirthday", 0) != 0) {
+            Date dob = new Date(sharedpreferences.getLong("userBirthday", 0));
+            Calendar cal = Calendar.getInstance();
+            cal.setTime(dob);
+            day.setText(String.format("%02d", cal.get(Calendar.DAY_OF_MONTH)));
+            month.setText(String.format("%02d", cal.get(Calendar.MONTH) + 1));
+            year.setText(Integer.toString(cal.get(Calendar.YEAR)));
+            tv1.setText("Edit Info");
+        } else {
+            tv1.setText("Sign Up");
+        }
     }
 
 

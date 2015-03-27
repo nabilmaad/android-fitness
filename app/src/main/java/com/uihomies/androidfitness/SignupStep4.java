@@ -42,6 +42,16 @@ public class SignupStep4 extends ActionBarActivity {
         TextView tv3=(TextView)findViewById(R.id.nextButton);
         Typeface face3=Typeface.createFromAsset(getAssets(),"fonts/DS_Marker_Felt.ttf");
         tv3.setTypeface(face3);
+
+        // Setting weight if already exists, and header title
+        SharedPreferences sharedpreferences = getSharedPreferences("appPreferences", Context.MODE_PRIVATE);
+        if(sharedpreferences.getInt("userWeight", 0) != 0) {
+            EditText weight = (EditText)findViewById(R.id.weight);
+            weight.setText(Integer.toString(sharedpreferences.getInt("userWeight", 0)));
+            tv1.setText("Edit Info");
+        } else {
+            tv1.setText("Sign Up");
+        }
     }
 
 

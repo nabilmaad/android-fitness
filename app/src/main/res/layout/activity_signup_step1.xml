@@ -39,7 +39,6 @@
                     android:layout_marginTop="@dimen/signupHeader_topMargin"
                     android:layout_centerHorizontal="true"
                     android:textSize="@dimen/signupHeader_size"
-                    android:text="Sign Up"
                     android:textColor="@color/signupHeader" />
             </RelativeLayout>
 

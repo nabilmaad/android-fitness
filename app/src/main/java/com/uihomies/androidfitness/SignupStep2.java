@@ -40,6 +40,25 @@ public class SignupStep2 extends ActionBarActivity {
         TextView tv3=(TextView)findViewById(R.id.nextButton);
         Typeface face3=Typeface.createFromAsset(getAssets(),"fonts/DS_Marker_Felt.ttf");
         tv3.setTypeface(face3);
+
+        // Setting gender if already exists, and header title
+        SharedPreferences sharedpreferences = getSharedPreferences("appPreferences", Context.MODE_PRIVATE);
+        int gender = sharedpreferences.getInt("userGender", 0);
+        if(gender == 1) {
+            Button maleButton = (Button)findViewById(R.id.maleButton);
+            maleButton.setActivated(true);
+            tv1.setText("Edit Info");
+        } else if (gender == 2) {
+            Button femaleButton = (Button)findViewById(R.id.femaleButton);
+            femaleButton.setActivated(true);
+            tv1.setText("Edit Info");
+        } else if (gender == 3) {
+            Button noneButton = (Button)findViewById(R.id.noneButton);
+            noneButton.setActivated(true);
+            tv1.setText("Edit Info");
+        } else {
+            tv1.setText("Sign Up");
+        }
     }
 
 
@@ -142,8 +161,6 @@ public class SignupStep2 extends ActionBarActivity {
             SharedPreferences.Editor editor = sharedpreferences.edit();
             editor.putInt("userGender", gender);
             editor.commit();
-
-            System.out.println(sharedpreferences.getInt("userGender", 0));
 
             // Load next activity
             Intent intent = new Intent(SignupStep2.this, SignupStep3.class);

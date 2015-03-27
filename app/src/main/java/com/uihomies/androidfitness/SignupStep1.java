@@ -37,6 +37,16 @@ public class SignupStep1 extends Activity {
         TextView tv3=(TextView)findViewById(R.id.nextButton);
         Typeface face3=Typeface.createFromAsset(getAssets(),"fonts/DS_Marker_Felt.ttf");
         tv3.setTypeface(face3);
+
+        // Setting name if already exists, and the header title
+        SharedPreferences sharedpreferences = getSharedPreferences("appPreferences", Context.MODE_PRIVATE);
+        if(!sharedpreferences.getString("userName", "").equals("")) {
+            EditText name = (EditText)findViewById(R.id.name);
+            name.setText(sharedpreferences.getString("userName", ""));
+            tv1.setText("Edit Info");
+        } else {
+            tv1.setText("Sign Up");
+        }
     }
 
 

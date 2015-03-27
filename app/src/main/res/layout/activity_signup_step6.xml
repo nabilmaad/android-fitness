@@ -36,10 +36,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
-                    android:layout_marginTop="@dimen/signupHeader_topMargin"
+                    android:layout_marginTop="@dimen/audioPreferenceHeader_topMargin"
                     android:layout_centerHorizontal="true"
-                    android:textSize="@dimen/signupHeader_size"
-                    android:text="Sign Up"
+                    android:textSize="@dimen/audioPreferenceHeader_size"
+                    android:text="Audio Preference"
                     android:textColor="@color/signupHeader" />
             </RelativeLayout>
 

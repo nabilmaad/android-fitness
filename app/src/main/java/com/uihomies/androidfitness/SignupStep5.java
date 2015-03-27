@@ -37,6 +37,32 @@ public class SignupStep5 extends ActionBarActivity {
         TextView tv3=(TextView)findViewById(R.id.nextButton);
         Typeface face3=Typeface.createFromAsset(getAssets(),"fonts/DS_Marker_Felt.ttf");
         tv3.setTypeface(face3);
+
+        // Setting athletic level if already exists, and header title
+        SharedPreferences sharedpreferences = getSharedPreferences("appPreferences", Context.MODE_PRIVATE);
+        int athleticLevel = sharedpreferences.getInt("userAthleticLevel", 0);
+        if(athleticLevel == 1) {
+            Button beginnerButton = (Button)findViewById(R.id.beginnerButton);
+            beginnerButton.setActivated(true);
+            tv1.setText("Edit Info");
+        } else if (athleticLevel == 2) {
+            Button averageButton = (Button)findViewById(R.id.averageButton);
+            averageButton.setActivated(true);
+            tv1.setText("Edit Info");
+        } else if (athleticLevel == 3) {
+            Button athleticButton = (Button)findViewById(R.id.athleticButton);
+            athleticButton.setActivated(true);
+            tv1.setText("Edit Info");
+        } else {
+            tv1.setText("Sign Up");
+        }
+
+        // Setting next button text
+        TextView nextButton = (TextView)findViewById(R.id.nextButton);
+        if(athleticLevel == 0)
+            nextButton.setText(getResources().getString(R.string.signupNext));
+        else
+            nextButton.setText(getResources().getString(R.string.signupDone));
     }
 
 
@@ -140,8 +166,13 @@ public class SignupStep5 extends ActionBarActivity {
             editor.putInt("userAthleticLevel", athleticLevel);
             editor.commit();
 
-            // Load next activity
-            Intent intent = new Intent(SignupStep5.this, SignupStep6.class);
+            // Load next activity (depending on whether it's signup or edit info)
+            TextView title=(TextView)findViewById(R.id.signupTitle);
+            Intent intent;
+            if(title.getText().equals("Sign Up"))
+                intent = new Intent(SignupStep5.this, SignupStep6.class);
+            else
+                intent = new Intent(SignupStep5.this, Profile.class);
             startActivity(intent);
         }
     }

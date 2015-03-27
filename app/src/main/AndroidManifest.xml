@@ -11,6 +11,12 @@
             android:name=".SignupStep1"
             android:label="@string/title_activity_signup_step1"
             android:screenOrientation="portrait" >
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".SignupStep2"
@@ -34,24 +40,23 @@
         </activity>
         <activity
             android:name=".SignupStep6"
-            android:label="@string/title_activity_signup_step6" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:label="@string/title_activity_signup_step6"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".Profile"
-            android:label="@string/title_activity_profile" >
+            android:label="@string/title_activity_profile"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".Game"
-            android:label="@string/title_activity_game" >
+            android:label="@string/title_activity_game"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".Summary"
-            android:label="@string/title_activity_summary" >
+            android:label="@string/title_activity_summary"
+            android:screenOrientation="portrait">
         </activity>
     </application>
 
