@@ -47,6 +47,7 @@
                 android:orientation="vertical"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:weightSum="1"
                 android:layout_marginLeft="@dimen/signupSideMargin"
                 android:layout_marginRight="@dimen/signupSideMargin">
@@ -58,40 +59,43 @@
                     android:textColor="@color/signupText"
                     android:textSize="@dimen/signupQuestions_size"
                     android:text="Would you like voice prompts in-game?"
+                    android:gravity="center"
                     android:id="@+id/audioFeedbackLabel"
                     />
 
                 <RelativeLayout
                     android:orientation="horizontal"
-                    android:layout_width="wrap_content"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/signupDistanceBetweenQuestionAndAnswer">
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/signupDistanceBetweenQuestionAndAudio">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="30dp"
                         android:textColor="@color/signupText"
                         android:textSize="@dimen/signupAudioFeedback_size"
                         android:text="AUDIO FEEDBACK"
+                        android:gravity="left"
                         android:id="@+id/audioFeedbackAnswer"
                         />
 
                     <CheckBox
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
                         android:button="@drawable/checkbox_design"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="40dp"
                         android:id="@+id/audioCheckbox"/>
 
                 </RelativeLayout>
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/signupDistanceBetweenQuestionAndAnswer"
-                    android:layout_marginLeft="@dimen/signupDistanceBetweenAudioFeedbackAndHint"
-                    android:layout_gravity="center"
+                    android:gravity="center"
                     android:textColor="@color/signupAudioHint"
                     android:textSize="@dimen/signupAudioHint_size"
                     android:text="You can change this in Settings"

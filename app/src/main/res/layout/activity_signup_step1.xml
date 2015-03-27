@@ -47,6 +47,7 @@
                 android:orientation="vertical"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
                 android:weightSum="1"
                 android:layout_marginLeft="@dimen/signupSideMargin"
                 android:layout_marginRight="@dimen/signupSideMargin">
@@ -57,7 +58,8 @@
                     android:layout_marginTop="@dimen/signupDistanceBetweenCloudAndQuestion"
                     android:textColor="@color/signupText"
                     android:textSize="@dimen/signupQuestions_size"
-                    android:text="What is your name?"
+                    android:text="What would you like to be called?"
+                    android:gravity="center"
                     android:id="@+id/nameLabel"
                     />
 
@@ -65,7 +67,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="@dimen/signupEditTextHeight"
                     android:layout_marginTop="@dimen/signupDistanceBetweenQuestionAndAnswer"
-                    android:inputType="textPersonName"
+                    android:inputType="textCapSentences"
                     android:hint="@string/nameHint"
                     android:textColorHint="@color/signupInputHint"
                     android:textColor="@color/signupInputFields"

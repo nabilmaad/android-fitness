@@ -8,6 +8,7 @@
     <string name="weightHint"><i> i.e. 100</i></string>
     <string name="signupNext">Next ></string>
     <string name="signupDone">Done</string>
+    <string name="editProfile">Edit</string>
 
     <!-- Added by the system -->
     <string name="hello_world">Hello world!</string>
@@ -20,6 +21,6 @@
     <string name="title_activity_signup_step6">SignupStep6</string>
     <string name="title_activity_game">Game</string>
     <string name="title_activity_summary">Summary</string>
-
+    <string name="title_activity_profile">Profile</string>
 
 </resources>

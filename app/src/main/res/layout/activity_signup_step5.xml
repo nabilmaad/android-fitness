@@ -58,6 +58,7 @@
                     android:textColor="@color/signupText"
                     android:textSize="@dimen/signupQuestions_size"
                     android:text="What is your athletic level?"
+                    android:gravity="center"
                     android:id="@+id/athleticLevelLabel"
                     />
 

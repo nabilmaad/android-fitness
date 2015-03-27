@@ -68,7 +68,7 @@ public class SignupStep1 extends Activity {
 
         // Error handling
         boolean valid = true;
-        if(!userName.matches("[A-Z][a-z]+")){
+        if(!userName.matches("[A-Z][a-z]*")){
             nameTextField.setError("Name must start with a capital letter and contain letters only.");
             valid = false;
         }

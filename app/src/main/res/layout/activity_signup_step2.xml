@@ -47,6 +47,7 @@
                 android:orientation="vertical"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
                 android:weightSum="1"
                 android:layout_marginLeft="@dimen/signupSideMargin"
                 android:layout_marginRight="@dimen/signupSideMargin">
@@ -57,7 +58,8 @@
                     android:layout_marginTop="@dimen/signupDistanceBetweenCloudAndQuestion"
                     android:textColor="@color/signupText"
                     android:textSize="@dimen/signupQuestions_size"
-                    android:text="Select your gender"
+                    android:text="What is your gender?"
+                    android:gravity="center"
                     android:id="@+id/genderLabel"
                     />
 

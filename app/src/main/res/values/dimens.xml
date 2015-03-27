@@ -3,7 +3,7 @@
     <dimen name="signupHeader_topMargin">55dp</dimen>
     <dimen name="signupHeader_size">50dp</dimen>
 
-    <dimen name="signupDistanceBetweenCloudAndQuestion">30dp</dimen>
+    <dimen name="signupDistanceBetweenCloudAndQuestion">20dp</dimen>
     <dimen name="signupQuestions_size">26dp</dimen>
     <dimen name="signupAudioFeedback_size">30dp</dimen>
     <dimen name="signupAudioHint_size">22dp</dimen>
@@ -11,6 +11,7 @@
     <dimen name="signupDistanceBetweenQuestionAndAnswer">10dp</dimen>
     <dimen name="signupAudioFeedback">50dp</dimen>
     <dimen name="signupDistanceBetweenAudioFeedbackAndHint">30dp</dimen>
+    <dimen name="signupDistanceBetweenQuestionAndAudio">20dp</dimen>
 
     <dimen name="signupEditTextHeight">50dp</dimen>
 
