@@ -1,9 +1,13 @@
 package com.uihomies.androidfitness;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.CheckBox;
 
 import com.uihomies.androidfitness.R;
 
@@ -13,6 +17,15 @@ public class SettingsActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
+
+        // Check checkbox state
+        CheckBox checkbox = (CheckBox)findViewById(R.id.audioCheckbox);
+        SharedPreferences sharedpreferences = getSharedPreferences("appPreferences", Context.MODE_PRIVATE);
+        boolean audioFeedback = sharedpreferences.getBoolean("audioFeedback", false);
+        if(audioFeedback) {
+            checkbox.setChecked(true);
+        }
+        else checkbox.setChecked(false);
     }
 
 
@@ -36,5 +49,19 @@ public class SettingsActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void handleCheckbox(View view)
+    {
+        CheckBox checkbox=(CheckBox)findViewById(R.id.audioCheckbox);
+
+        // Save user's audio feedback preference
+        SharedPreferences sharedpreferences = getSharedPreferences("appPreferences", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedpreferences.edit();
+        editor.putBoolean("audioFeedback", checkbox.isChecked());
+
+        // checkBox updated
+        // if putBoolean("audioFeedback", checkbox.isChecked());
+        editor.commit();
     }
 }

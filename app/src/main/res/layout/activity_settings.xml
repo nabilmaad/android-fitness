@@ -79,16 +79,17 @@
         android:textStyle="bold"
         android:textAlignment="center"
         android:layout_below="@+id/textView2"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_alignStart="@+id/textView2" />
+        android:layout_centerHorizontal="true" />
 
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:button="@drawable/checkbox_design"
-        android:id="@+id/checkBox2"
+        android:id="@+id/audioCheckbox"
         android:layout_alignTop="@+id/textView2"
         android:layout_toRightOf="@+id/textView3"
-        android:layout_toEndOf="@+id/textView3" />
+        android:layout_toEndOf="@+id/textView3"
+        android:layout_above="@+id/textView3"
+        android:checked="false" />
 
 </RelativeLayout>

@@ -89,7 +89,8 @@ public class SignupStep6 extends ActionBarActivity {
         editor.commit();
 
         // Load next activity
-        Intent intent = new Intent(SignupStep6.this, Profile.class);
+        Intent intent = new Intent(SignupStep6.this, MainMenuActivity.class);
         startActivity(intent);
+
     }
 }
