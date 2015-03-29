@@ -16,7 +16,7 @@
         android:src="@drawable/cloud" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/deleteProfileButton"
         android:layout_width="fill_parent"
         android:layout_height="50dp"
         android:layout_gravity="center_horizontal|center"
@@ -24,8 +24,71 @@
         android:textSize="@dimen/signupNextTextSize"
         android:textColor="@color/signupText"
         android:text="DELETE PROFILE"
-        android:onClick="nextButtonClick"
+        android:onClick="//alert view"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="148dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="SETTINGS"
+        android:id="@+id/textView"
+        android:textColor="#ff000000"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="54dp"
-        android:layout_centerVertical="true" />
+        android:layout_marginTop="70dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Erases all profile and progress information. Cannot be undone."
+        android:id="@+id/profileWarning"
+        android:layout_alignTop="@+id/deleteProfileButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="59dp"
+        android:textColor="#d4d1d1"
+        android:textStyle="bold"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="AUDIO FEEDBACK"
+        android:id="@+id/textView2"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:layout_centerVertical="true"
+        android:layout_alignRight="@+id/textView"
+        android:layout_alignEnd="@+id/textView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Enables in-game voice prompts."
+        android:id="@+id/textView3"
+        android:textColor="#d4d1d1"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id/textView2"
+        android:layout_alignStart="@+id/textView2" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@drawable/checkbox_design"
+        android:id="@+id/checkBox2"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_toRightOf="@+id/textView3"
+        android:layout_toEndOf="@+id/textView3" />
+
 </RelativeLayout>

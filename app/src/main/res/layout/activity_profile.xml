@@ -32,14 +32,17 @@
             android:contentDescription="cloudImage" />
 
         <TextView
-            android:id="@+id/profileTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="@dimen/signupHeader_topMargin"
-            android:layout_centerHorizontal="true"
-            android:textSize="@dimen/signupHeader_size"
-            android:textColor="@color/signupHeader" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="PROFILE"
+            android:id="@+id/profileText"
+            android:textColor="#ff000000"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
     </RelativeLayout>
 
         <LinearLayout
