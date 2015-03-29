@@ -16,12 +16,16 @@
         android:src="@drawable/cloud" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/button2"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal|center"
+        android:background="@color/signupNext"
+        android:textSize="@dimen/signupNextTextSize"
+        android:textColor="@color/signupText"
         android:text="DELETE PROFILE"
-        android:id="@+id/button"
-        android:layout_centerVertical="true"
+        android:onClick="nextButtonClick"
         android:layout_centerHorizontal="true"
-        android:background="#ed1c24"
-        android:fontFamily="\@assets/fonts/Marker_Felt_Bold.ttf" />
+        android:layout_marginTop="54dp"
+        android:layout_centerVertical="true" />
 </RelativeLayout>
