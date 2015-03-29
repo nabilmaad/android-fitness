@@ -36,18 +36,59 @@
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageButton"
+        android:id="@+id/launchButton"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/launchbutton" />
+        android:focusable="false"
+        android:clickable="false"
+        android:padding="0dp"
+        android:src="@drawable/launchbutton"
+        android:background="@null" />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageButton2"
+        android:id="@+id/progressButton"
+        android:src="@drawable/progressbutton"
+        android:clickable="true"
+        android:padding="0dp"
+        android:background="@null"
+        android:layout_below="@+id/launchButton"
+        android:layout_alignRight="@+id/rocketImageView"
+        android:layout_alignEnd="@+id/rocketImageView" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/profileButton"
+        android:layout_alignBottom="@+id/progressButton"
+        android:layout_alignLeft="@+id/rocketImageView"
+        android:layout_alignStart="@+id/rocketImageView"
+        android:src="@drawable/profilebutton"
+        android:layout_below="@+id/launchButton"
+        android:padding="0dp"
+        android:background="@null" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/settingsButton"
+        android:src="@drawable/settingsbutton"
+        android:padding="0dp"
+        android:background="@null"
         android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/imageButton"
-        android:layout_alignStart="@+id/imageButton"
-        android:src="@drawable/progressbutton" />
+        android:layout_alignRight="@+id/launchButton"
+        android:layout_alignEnd="@+id/launchButton" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton"
+        android:src="@drawable/tutorialbutton"
+        android:padding="0dp"
+        android:background="@null"
+        android:layout_alignTop="@+id/settingsButton"
+        android:layout_alignLeft="@+id/launchButton"
+        android:layout_alignStart="@+id/launchButton" />
 
 </RelativeLayout>

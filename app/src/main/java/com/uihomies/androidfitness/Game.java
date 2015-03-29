@@ -84,6 +84,7 @@ public class Game extends ActionBarActivity {
         Button btnConnect = (Button) findViewById(R.id.ButtonConnect);
         if (btnConnect != null)
         {
+            // TODO When clicking connect with bluetooth off and no adapter, the app crashes. Error message needed.
             btnConnect.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     String BhMacID = "00:07:80:9D:8A:E8";
