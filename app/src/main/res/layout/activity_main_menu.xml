@@ -42,8 +42,9 @@
         android:focusable="false"
         android:clickable="false"
         android:padding="0dp"
+        android:background="@null"
         android:src="@drawable/launchbutton"
-        android:background="@null" />
+        android:onClick="menuButtonClick" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -55,7 +56,8 @@
         android:background="@null"
         android:layout_below="@+id/launchButton"
         android:layout_alignRight="@+id/rocketImageView"
-        android:layout_alignEnd="@+id/rocketImageView" />
+        android:layout_alignEnd="@+id/rocketImageView"
+        android:onClick="menuButtonClick" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -67,7 +69,9 @@
         android:src="@drawable/profilebutton"
         android:layout_below="@+id/launchButton"
         android:padding="0dp"
-        android:background="@null" />
+        android:background="@null"
+        android:nestedScrollingEnabled="false"
+        android:onClick="menuButtonClick" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -78,17 +82,19 @@
         android:background="@null"
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/launchButton"
-        android:layout_alignEnd="@+id/launchButton" />
+        android:layout_alignEnd="@+id/launchButton"
+        android:onClick="menuButtonClick" />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imageButton"
+        android:id="@+id/tutorialButton"
         android:src="@drawable/tutorialbutton"
         android:padding="0dp"
         android:background="@null"
         android:layout_alignTop="@+id/settingsButton"
         android:layout_alignLeft="@+id/launchButton"
-        android:layout_alignStart="@+id/launchButton" />
+        android:layout_alignStart="@+id/launchButton"
+        android:onClick="menuButtonClick" />
 
 </RelativeLayout>

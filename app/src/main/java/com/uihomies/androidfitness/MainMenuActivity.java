@@ -1,9 +1,11 @@
 package com.uihomies.androidfitness;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class MainMenuActivity extends ActionBarActivity {
@@ -35,5 +37,36 @@ public class MainMenuActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void menuButtonClick(View view) {
+        switch (view.getId()) {
+            case R.id.launchButton: {
+                Intent intent;
+                intent = new Intent(MainMenuActivity.this, Game.class);
+                startActivity(intent);
+                break;
+            }
+            case R.id.profileButton: {
+                Intent intent;
+                intent = new Intent(MainMenuActivity.this, Profile.class);
+                startActivity(intent);
+                break;
+            }
+            case R.id.progressButton: {
+                System.out.println("Progress clicked!");
+                break;
+            }
+            case R.id.tutorialButton: {
+                System.out.println("Tutorial clicked!");
+                break;
+            }
+            case R.id.settingsButton: {
+                Intent intent;
+                intent = new Intent(MainMenuActivity.this, SettingsActivity.class);
+                startActivity(intent);
+                break;
+            }
+        }
     }
 }
