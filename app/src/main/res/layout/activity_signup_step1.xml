@@ -23,9 +23,9 @@
                 android:layout_weight="0.00">
 
                 <ImageView
-                    android:layout_width="fill_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/cloudImage"
+                    android:id="@+id/cloudImageView"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:src="@drawable/cloud"
@@ -37,9 +37,10 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
                     android:layout_marginTop="@dimen/signupHeader_topMargin"
-                    android:layout_centerHorizontal="true"
                     android:textSize="@dimen/signupHeader_size"
-                    android:textColor="@color/signupHeader" />
+                    android:textColor="@color/signupHeader"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
             </RelativeLayout>
 
             <LinearLayout

@@ -18,18 +18,18 @@
 
             <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.00">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
                 <ImageView
-                    android:layout_width="fill_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/cloudImage"
+                    android:id="@+id/cloudImageView"
                     android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
                     android:src="@drawable/cloud"
-                    android:contentDescription="cloudImage" />
+                    android:contentDescription="cloudImage"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
 
                 <TextView
                     android:id="@+id/signupTitle"
@@ -56,9 +56,9 @@
                     android:layout_marginTop="@dimen/signupDistanceBetweenCloudAndQuestion"
                     android:textColor="@color/signupText"
                     android:textSize="@dimen/signupQuestions_size"
-                    android:text="Enter your weight"
+                    android:text="What is your weight?"
                     android:id="@+id/weightLabel"
-                    />
+                    android:textAlignment="center" />
 
                 <RelativeLayout
                     android:orientation="horizontal"
