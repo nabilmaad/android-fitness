@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="PROFILE"
-            android:id="@+id/profileText"
+            android:id="@+id/profileTitle"
             android:textColor="#ff000000"
             android:textSize="40dp"
             android:textStyle="bold"
