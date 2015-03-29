@@ -27,7 +27,8 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginBottom="148dp" />
+        android:layout_marginBottom="148dp"
+        android:onClick="deleteClicked" />
 
     <TextView
         android:layout_width="wrap_content"
