@@ -86,7 +86,10 @@ public class Profile extends ActionBarActivity {
 
     @Override
     public void onBackPressed() {
-        finish();
+        Intent intent = new Intent(Profile.this, MainMenuActivity.class);
+        startActivity(intent);
+
+        return;
     }
 
     @Override

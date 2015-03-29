@@ -8,6 +8,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.Toast;
 
 import com.uihomies.androidfitness.R;
 
@@ -26,6 +28,20 @@ public class SettingsActivity extends ActionBarActivity {
             checkbox.setChecked(true);
         }
         else checkbox.setChecked(false);
+        checkbox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+                SharedPreferences sharedpreferences = getSharedPreferences("appPreferences", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedpreferences.edit();
+                editor.putBoolean("audioFeedback", buttonView.isChecked());
+                if(buttonView.isChecked())
+                    Toast.makeText(getApplicationContext(), "Audio feedback turned on.", Toast.LENGTH_SHORT).show();
+                else
+                    Toast.makeText(getApplicationContext(), "Audio feedback turned off.", Toast.LENGTH_SHORT).show();
+                editor.commit();
+            }
+        });
     }
 
 
@@ -51,17 +67,10 @@ public class SettingsActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void handleCheckbox(View view)
-    {
-        CheckBox checkbox=(CheckBox)findViewById(R.id.audioCheckbox);
-
-        // Save user's audio feedback preference
-        SharedPreferences sharedpreferences = getSharedPreferences("appPreferences", Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedpreferences.edit();
-        editor.putBoolean("audioFeedback", checkbox.isChecked());
-
-        // checkBox updated
-        // if putBoolean("audioFeedback", checkbox.isChecked());
-        editor.commit();
+    public void deleteClicked(View view) {
+        //open alert view
+        //Profile deleted.
+        //Change to sign up
+        //Launch sign up
     }
 }

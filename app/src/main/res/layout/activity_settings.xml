@@ -24,7 +24,6 @@
         android:textSize="@dimen/signupNextTextSize"
         android:textColor="@color/signupText"
         android:text="DELETE PROFILE"
-        android:onClick="//alert view"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
@@ -55,7 +54,8 @@
         android:layout_marginTop="59dp"
         android:textColor="#d4d1d1"
         android:textStyle="bold"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:onClick="deleteClicked" />
 
     <TextView
         android:layout_width="wrap_content"
