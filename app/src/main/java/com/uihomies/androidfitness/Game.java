@@ -39,6 +39,13 @@ public class Game extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
+
+       // Hiding status and navigation bar
+        View decorView = getWindow().getDecorView();
+        int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                | View.SYSTEM_UI_FLAG_FULLSCREEN;
+        decorView.setSystemUiVisibility(uiOptions);
+
         // Setting the fonts
 
         // Stop Button
@@ -79,10 +86,30 @@ public class Game extends ActionBarActivity {
         t.start();
     }
 
+   @Override
+   public void onResume(){
+       super.onResume();
+       // Hiding status and navigation bar
+       View decorView = getWindow().getDecorView();
+       int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+               | View.SYSTEM_UI_FLAG_FULLSCREEN;
+       decorView.setSystemUiVisibility(uiOptions);
+   }
+
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus){
+        super.onWindowFocusChanged(hasFocus);
+        // Hiding status and navigation bar
+        View decorView = getWindow().getDecorView();
+        int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                | View.SYSTEM_UI_FLAG_FULLSCREEN;
+        decorView.setSystemUiVisibility(uiOptions);
+    }
+
     public void updateTextView() {
         TextView tv3=(TextView)findViewById(R.id.heartRateLabel);
         tv3.setText(Integer.toString(myHeartRate));
-        if(myHeartRate <= 100){
+        while(myHeartRate <= 100){
             myHeartRate++;
         }
 
