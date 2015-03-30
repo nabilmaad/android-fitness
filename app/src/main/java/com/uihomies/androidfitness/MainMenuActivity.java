@@ -61,7 +61,7 @@ public class MainMenuActivity extends ActionBarActivity {
         switch (view.getId()) {
             case R.id.launchButton: {
                 Intent intent;
-                intent = new Intent(MainMenuActivity.this, Game.class);
+                intent = new Intent(MainMenuActivity.this, SensorConnect.class);
                 startActivity(intent);
                 break;
             }

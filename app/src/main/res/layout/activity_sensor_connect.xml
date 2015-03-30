@@ -3,10 +3,9 @@
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@color/background"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.uihomies.androidfitness.SignupStep1"
-    android:padding="0dp">
+    android:background="@color/background"
+    tools:context="com.uihomies.androidfitness.SensorConnect">
 
     <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
         android:fitsSystemWindows="true">
@@ -29,14 +28,16 @@
                     android:src="@drawable/cloud"
                     android:contentDescription="cloudImage" />
                 <TextView
-                    android:id="@+id/signupTitle"
+                    android:id="@+id/connectTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
                     android:layout_marginTop="@dimen/signupHeader_topMargin"
                     android:layout_centerHorizontal="true"
                     android:textSize="@dimen/signupHeader_size"
-                    android:textColor="@color/signupHeader" />
+                    android:textColor="@color/signupHeader"
+                    android:text="Connect Heart Sensor"
+                    android:gravity="center"/>
             </RelativeLayout>
             <LinearLayout
                 android:orientation="vertical"
@@ -52,21 +53,43 @@
                     android:layout_marginTop="@dimen/signupDistanceBetweenCloudAndQuestion"
                     android:textColor="@color/signupText"
                     android:textSize="@dimen/signupQuestions_size"
-                    android:text="What would you like to be called?"
+                    android:text="Tap connect button below"
                     android:gravity="center"
-                    android:id="@+id/nameLabel"
+                    android:id="@+id/instructionLabel"
                     />
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="@dimen/signupEditTextHeight"
-                    android:layout_marginTop="@dimen/signupDistanceBetweenQuestionAndAnswer"
-                    android:inputType="textCapSentences"
-                    android:hint="@string/nameHint"
-                    android:textColorHint="@color/signupInputHint"
-                    android:textColor="@color/signupInputFields"
-                    android:ems="15"
-                    android:id="@+id/name"
-                    android:background="@drawable/edit_text_design"/>
+                <Button
+                    android:id="@+id/ButtonConnect"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal|center"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/signupNext"
+                    android:textSize="@dimen/signupNextTextSize"
+                    android:textColor="@color/signupText"
+                    android:text="Connect"
+                    android:onClick="connectButtonClick"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:textColor="@color/signupText"
+                    android:textSize="@dimen/signupQuestions_size"
+                    android:text="Heart Rate (bpm)"
+                    android:gravity="center"
+                    android:id="@+id/heartRateLabel"
+                    android:visibility="invisible"
+                    />
+                <TextView
+                    android:id="@+id/labelHeartRate"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:text="000"
+                    android:textSize="30dp"
+                    android:layout_below="@+id/ButtonConnect"
+                    android:gravity="center"
+                    android:layout_alignParentRight="true"
+                    android:visibility="invisible"></TextView>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -85,10 +108,12 @@
                     android:background="@color/signupNext"
                     android:textSize="@dimen/signupNextTextSize"
                     android:textColor="@color/signupText"
-                    android:text="@string/signupNext"
+                    android:text="Play!"
                     android:onClick="nextButtonClick"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:visibility="invisible"/>
             </LinearLayout>
         </LinearLayout>
     </FrameLayout>
+
 </RelativeLayout>

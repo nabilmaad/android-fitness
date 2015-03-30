@@ -30,5 +30,6 @@
     <string name="title_activity_tutorial2">Tutorial2</string>
     <string name="title_activity_tutorial3">Tutorial3</string>
     <string name="title_activity_tutorial4">Tutorial4</string>
+    <string name="title_activity_sensor_connect">SensorConnect</string>
 
 </resources>
