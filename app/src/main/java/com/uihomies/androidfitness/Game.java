@@ -31,6 +31,8 @@ import java.util.TimerTask;
 
 public class Game extends ActionBarActivity {
 
+    public final String TAG = "Game Activity";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +54,44 @@ public class Game extends ActionBarActivity {
         TextView tv3=(TextView)findViewById(R.id.heartRateLabel);
         Typeface face3=Typeface.createFromAsset(getAssets(),"fonts/Marker_Felt.ttf");
         tv3.setTypeface(face3);
+
+        // Start changing heart rate on click of label
+        tv3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                changeHRate();
+            }
+        });
+    }
+
+    public void changeHRate(){
+        Log.e(TAG, "*** changing heart rate");
+        TextView hrate = (TextView) findViewById(R.id.heartRateLabel);
+        try {
+            Thread.sleep(5000);
+            hrate.setText("90");
+            Log.e(TAG, "updating to 90");
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+            Log.e(TAG, "didn't update to 90");
+        }
+        try {
+            Thread.sleep(5000);
+            hrate.setText("88");
+            Log.e(TAG, "updating to 66");
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+            Log.e(TAG, "didn't update to 66");
+        }
+        try {
+            Thread.sleep(5000);
+            hrate.setText("91");
+            Log.e(TAG, "updating to 91");
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+            Log.e(TAG, "didn't update to 91");
+        }
+
     }
 
     @Override
