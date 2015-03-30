@@ -111,7 +111,9 @@ public class SettingsActivity extends ActionBarActivity {
                     .setIcon(android.R.drawable.ic_dialog_alert)
                     .show();
         }
+        //Emulate a profile being created
         else{
+            Toast.makeText(getApplicationContext(), "Profile created.", Toast.LENGTH_SHORT).show();
             profileExists = true;
             deleteButton.setText("DELETE PROFILE");
             deleteButton.setBackgroundColor(Color.parseColor("#E74C3C"));

@@ -74,6 +74,26 @@
             android:label="@string/title_activity_settings"
             android:screenOrientation="portrait" >
         </activity>
+        <activity
+            android:name=".ProgressActivity"
+            android:label="@string/title_activity_progress" >
+        </activity>
+        <activity
+            android:name=".Tutorial1"
+            android:label="@string/title_activity_tutorial1" >
+        </activity>
+        <activity
+            android:name=".Tutorial2"
+            android:label="@string/title_activity_tutorial2" >
+        </activity>
+        <activity
+            android:name=".Tutorial3"
+            android:label="@string/title_activity_tutorial3" >
+        </activity>
+        <activity
+            android:name=".Tutorial4"
+            android:label="@string/title_activity_tutorial4" >
+        </activity>
     </application>
 
 </manifest>

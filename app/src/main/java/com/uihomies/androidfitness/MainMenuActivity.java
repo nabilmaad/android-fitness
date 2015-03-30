@@ -54,11 +54,15 @@ public class MainMenuActivity extends ActionBarActivity {
                 break;
             }
             case R.id.progressButton: {
-                System.out.println("Progress clicked!");
+                Intent intent;
+                intent = new Intent(MainMenuActivity.this, ProgressActivity.class);
+                startActivity(intent);
                 break;
             }
             case R.id.tutorialButton: {
-                System.out.println("Tutorial clicked!");
+                Intent intent;
+                intent = new Intent(MainMenuActivity.this, Tutorial1.class);
+                startActivity(intent);
                 break;
             }
             case R.id.settingsButton: {

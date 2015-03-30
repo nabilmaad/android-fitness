@@ -50,13 +50,17 @@
         android:text="Erases all profile and progress information. Cannot be undone."
         android:id="@+id/profileWarning"
         android:layout_alignTop="@+id/deleteProfileButton"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentRight="false"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="59dp"
         android:textColor="#d4d1d1"
         android:textStyle="bold"
         android:textAlignment="center"
-        android:onClick="deleteClicked" />
+        android:onClick="deleteClicked"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentBottom="false" />
 
     <TextView
         android:layout_width="wrap_content"

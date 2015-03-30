@@ -25,5 +25,10 @@
     <string name="title_activity_main_menu">MainMenuActivity</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_settings">SettingsActivity</string>
+    <string name="title_activity_progress">ProgressActivity</string>
+    <string name="title_activity_tutorial1">Tutorial1</string>
+    <string name="title_activity_tutorial2">Tutorial2</string>
+    <string name="title_activity_tutorial3">Tutorial3</string>
+    <string name="title_activity_tutorial4">Tutorial4</string>
 
 </resources>
