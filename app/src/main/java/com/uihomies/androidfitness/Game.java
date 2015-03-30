@@ -82,7 +82,10 @@ public class Game extends ActionBarActivity {
     public void updateTextView() {
         TextView tv3=(TextView)findViewById(R.id.heartRateLabel);
         tv3.setText(Integer.toString(myHeartRate));
-        myHeartRate++;
+        if(myHeartRate <= 100){
+            myHeartRate++;
+        }
+
     }
 
     @Override
