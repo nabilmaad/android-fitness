@@ -27,6 +27,7 @@ import com.uihomies.androidfitness.R;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Set;
+import java.util.TimerTask;
 
 public class Game extends ActionBarActivity {
 
@@ -51,16 +52,6 @@ public class Game extends ActionBarActivity {
         TextView tv3=(TextView)findViewById(R.id.heartRateLabel);
         Typeface face3=Typeface.createFromAsset(getAssets(),"fonts/Marker_Felt.ttf");
         tv3.setTypeface(face3);
-
-        // Simulation
-
-    }
-
-    public class SimulationThread extends Thread {
-
-        public void run(){
-            System.out.println("MyThread running");
-        }
     }
 
     @Override
