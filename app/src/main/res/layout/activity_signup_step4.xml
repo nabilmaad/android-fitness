@@ -58,7 +58,7 @@
                     android:textSize="@dimen/signupQuestions_size"
                     android:text="What is your weight?"
                     android:id="@+id/weightLabel"
-                    android:textAlignment="center" />
+                    android:gravity="center" />
 
                 <RelativeLayout
                     android:orientation="horizontal"
@@ -77,7 +77,8 @@
                         android:ems="8"
                         android:maxLength="3"
                         android:id="@+id/weight"
-                        android:background="@drawable/edit_text_design"/>
+                        android:background="@drawable/edit_text_design"
+                        android:layout_toStartOf="@+id/kgLabel" />
 
                     <TextView
                         android:id="@+id/kgLabel"

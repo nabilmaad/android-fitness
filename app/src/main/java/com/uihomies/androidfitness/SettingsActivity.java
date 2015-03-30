@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -29,16 +30,19 @@ public class SettingsActivity extends ActionBarActivity {
         setContentView(R.layout.activity_settings);
         deleteButton = (Button) findViewById(R.id.deleteProfileButton);
         profileWarning = (TextView) findViewById(R.id.profileWarning);
+        profileWarning.setGravity(Gravity.CENTER);
         if(profileExists)
         {
             deleteButton.setText("DELETE PROFILE");
             deleteButton.setBackgroundColor(Color.parseColor("#E74C3C"));
             profileWarning.setText("Erases all profile and progress information. Cannot be undone.");
+            profileWarning.setGravity(Gravity.CENTER);
         }
         else{
             deleteButton.setText("SIGN UP");
             deleteButton.setBackgroundColor(Color.parseColor("#2ECC71"));
             profileWarning.setText("Please create a profile to play the game.");
+            profileWarning.setGravity(Gravity.CENTER);
         }
         // Check checkbox state
         CheckBox checkbox = (CheckBox)findViewById(R.id.audioCheckbox);
@@ -99,6 +103,7 @@ public class SettingsActivity extends ActionBarActivity {
                             profileExists = false;
                             deleteButton.setText("SIGN UP");
                             deleteButton.setBackgroundColor(Color.parseColor("#2ECC71"));
+                            profileWarning.setGravity(Gravity.CENTER);
                             profileWarning.setText("Please create a profile to play the game.");
                             //Launch sign up
                         }
@@ -118,6 +123,7 @@ public class SettingsActivity extends ActionBarActivity {
             deleteButton.setText("DELETE PROFILE");
             deleteButton.setBackgroundColor(Color.parseColor("#E74C3C"));
             profileWarning.setText("Erases all profile and progress information. Cannot be undone.");
+            profileWarning.setGravity(Gravity.CENTER);
         }
     }
 }
