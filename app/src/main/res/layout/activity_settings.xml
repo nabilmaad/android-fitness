@@ -32,7 +32,8 @@
         android:layout_alignRight="@+id/audioCheckbox"
         android:layout_alignEnd="@+id/audioCheckbox"
         android:layout_alignLeft="@+id/audioTitle"
-        android:layout_alignStart="@+id/audioTitle" />
+        android:layout_alignStart="@+id/audioTitle"
+        android:textStyle="bold" />
 
     <TextView
         android:layout_width="wrap_content"

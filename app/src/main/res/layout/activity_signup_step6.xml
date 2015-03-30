@@ -36,7 +36,8 @@
                     android:layout_centerHorizontal="true"
                     android:textSize="@dimen/audioPreferenceHeader_size"
                     android:text="AUDIO PREFERENCE"
-                    android:textColor="@color/signupHeader" />
+                    android:textColor="@color/signupHeader"
+                    android:textStyle="bold" />
             </RelativeLayout>
             <LinearLayout
                 android:orientation="vertical"
@@ -111,7 +112,8 @@
                     android:textSize="@dimen/signupNextTextSize"
                     android:textColor="@color/signupText"
                     android:text="@string/signupDone"
-                    android:onClick="doneButtonClick"/>
+                    android:onClick="doneButtonClick"
+                    android:textStyle="bold" />
             </LinearLayout>
         </LinearLayout>
     </FrameLayout>

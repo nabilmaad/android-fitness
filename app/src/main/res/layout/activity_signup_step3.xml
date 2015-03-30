@@ -137,7 +137,8 @@
                     android:textSize="@dimen/signupNextTextSize"
                     android:textColor="@color/signupText"
                     android:text="@string/signupNext"
-                    android:onClick="nextButtonClick"/>
+                    android:onClick="nextButtonClick"
+                    android:textStyle="bold" />
             </LinearLayout>
 
         </LinearLayout>

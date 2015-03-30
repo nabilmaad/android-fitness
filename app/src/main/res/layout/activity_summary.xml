@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -6,6 +6,205 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:orientation="vertical"
     tools:context="com.uihomies.androidfitness.Summary"
-    android:background="@color/background">
+    android:background="@color/background"
+    android:padding="0dp">
 
-</LinearLayout>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView3"
+        android:src="@drawable/cloud"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="SUMMARY"
+        android:id="@+id/summaryTitle"
+        android:textColor="#ff000000"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:layout_marginTop="64dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/signupText"
+        android:textSize="@dimen/signupQuestions_size"
+        android:text="HEART RATES"
+        android:id="@+id/heartRateTitle"
+        android:layout_below="@+id/imageView3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Average:"
+        android:id="@+id/averageTitle"
+        android:textStyle="bold"
+        android:layout_alignTop="@+id/avgValue"
+        android:layout_alignLeft="@+id/heartRateTitle"
+        android:layout_alignStart="@+id/heartRateTitle" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Resting:"
+        android:id="@+id/restingTitle"
+        android:textStyle="bold"
+        android:layout_below="@+id/avgValue"
+        android:layout_alignLeft="@+id/averageTitle"
+        android:layout_alignStart="@+id/averageTitle" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Maximum:"
+        android:id="@+id/maxTitle"
+        android:textStyle="bold"
+        android:layout_below="@+id/restValue"
+        android:layout_alignLeft="@+id/restingTitle"
+        android:layout_alignStart="@+id/restingTitle" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="80"
+        android:id="@+id/restValue"
+        android:textSize="25dp"
+        android:layout_below="@+id/avgValue"
+        android:layout_alignRight="@+id/summaryTitle"
+        android:layout_alignEnd="@+id/summaryTitle" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="120"
+        android:id="@+id/maxValue"
+        android:textSize="25dp"
+        android:layout_alignTop="@+id/maxTitle"
+        android:layout_alignLeft="@+id/restValue"
+        android:layout_alignStart="@+id/restValue" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="98"
+        android:id="@+id/avgValue"
+        android:textSize="25dp"
+        android:layout_alignTop="@+id/imageView5"
+        android:layout_alignLeft="@+id/restValue"
+        android:layout_alignStart="@+id/restValue" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/signupText"
+        android:textSize="@dimen/signupQuestions_size"
+        android:text="DISTANCE"
+        android:id="@+id/distanceTitle"
+        android:textStyle="bold"
+        android:layout_below="@+id/maxTitle"
+        android:layout_alignLeft="@+id/maxTitle"
+        android:layout_alignStart="@+id/maxTitle" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="50km"
+        android:id="@+id/distValue"
+        android:layout_alignBottom="@+id/distanceTitle"
+        android:layout_alignLeft="@+id/maxValue"
+        android:layout_alignStart="@+id/maxValue"
+        android:textSize="25dp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="46dp"
+        android:textColor="@color/signupText"
+        android:textSize="@dimen/signupQuestions_size"
+        android:text="TIME"
+        android:id="@+id/timeTitle"
+        android:textStyle="bold"
+        android:layout_below="@+id/distanceTitle"
+        android:layout_alignLeft="@+id/distanceTitle"
+        android:layout_alignStart="@+id/distanceTitle" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="00:00"
+        android:id="@+id/timeValue"
+        android:layout_alignBottom="@+id/timeTitle"
+        android:layout_alignLeft="@+id/distValue"
+        android:layout_alignStart="@+id/distValue"
+        android:textSize="25dp" />
+
+    <Button
+        android:id="@+id/okButton"
+        android:layout_width="340dp"
+        android:layout_height="@dimen/signupNextHeight"
+        android:layout_gravity="center_horizontal|center"
+        android:background="@color/signupNext"
+        android:textSize="@dimen/signupNextTextSize"
+        android:textColor="@color/signupText"
+        android:text="OK"
+        android:onClick="doneButtonClick"
+        android:textStyle="bold"
+        android:layout_marginBottom="18dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/imageView4"
+        android:src="@drawable/heart"
+        android:layout_above="@+id/maxValue"
+        android:layout_alignLeft="@+id/imageView6"
+        android:layout_alignStart="@+id/imageView6"
+        android:layout_marginLeft="0dp" />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/imageView5"
+        android:src="@drawable/heart"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/imageView4"
+        android:layout_alignStart="@+id/imageView4"
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="10dp" />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/imageView6"
+        android:src="@drawable/heart"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="11dp"
+        android:layout_alignBottom="@+id/maxValue"
+        android:layout_toRightOf="@+id/maxValue"
+        android:layout_toEndOf="@+id/maxValue"
+        android:layout_marginBottom="5dp" />
+
+</RelativeLayout>

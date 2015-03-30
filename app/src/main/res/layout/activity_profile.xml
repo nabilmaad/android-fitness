@@ -135,7 +135,7 @@
                         android:layout_marginTop="@dimen/signupDistanceBetweenCloudAndQuestion"
                         android:textColor="@color/signupText"
                         android:textSize="@dimen/signupQuestions_size"
-                        android:text="ATHLETIC LEVEL:"
+                        android:text="ATHLETIC LEVEL"
                         android:id="@+id/athleticLevelLabel"
                         />
                     <TextView
@@ -169,7 +169,8 @@
                 android:textSize="@dimen/signupNextTextSize"
                 android:textColor="@color/signupText"
                 android:text="@string/editProfile"
-                android:onClick="editButtonClick"/>
+                android:onClick="editButtonClick"
+                android:textStyle="bold" />
         </LinearLayout>
 
     </LinearLayout>

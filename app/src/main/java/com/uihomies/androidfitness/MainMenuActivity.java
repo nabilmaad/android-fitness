@@ -1,6 +1,8 @@
 package com.uihomies.androidfitness;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -14,6 +16,18 @@ public class MainMenuActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
+        SharedPreferences sharedpreferences = getSharedPreferences("appPreferences", Context.MODE_PRIVATE);
+        if(sharedpreferences.getBoolean("firstLaunch", true) | sharedpreferences.getString("userName", "").equals(""))
+        {
+            SharedPreferences.Editor editor = sharedpreferences.edit();
+            editor.putBoolean("firstLaunch", false);
+            editor.commit();
+            startActivity(new Intent(this, SignupStep1.class));
+        }
+        else
+        {
+            startActivity(new Intent(this, MainMenuActivity.class));
+        }
     }
 
 
@@ -39,6 +53,10 @@ public class MainMenuActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onBackPressed(){
+        //exit app
+    }
     public void menuButtonClick(View view) {
         switch (view.getId()) {
             case R.id.launchButton: {
