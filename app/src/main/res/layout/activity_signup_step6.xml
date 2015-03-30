@@ -5,7 +5,8 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:background="@color/background"
-    tools:context="com.uihomies.androidfitness.SignupStep6">
+    tools:context="com.uihomies.androidfitness.SignupStep6"
+    android:padding="0dp">
     <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
         android:fitsSystemWindows="true">
         <LinearLayout
@@ -75,9 +76,12 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:button="@drawable/checkbox_design"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginRight="40dp"
-                        android:id="@+id/audioCheckbox"/>
+                        android:id="@+id/audioCheckbox"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/audioFeedbackAnswer"
+                        android:layout_toEndOf="@+id/audioFeedbackAnswer"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginStart="18dp" />
                 </RelativeLayout>
                 <TextView
                     android:layout_width="fill_parent"
@@ -86,7 +90,7 @@
                     android:gravity="center"
                     android:textColor="@color/signupAudioHint"
                     android:textSize="@dimen/signupAudioHint_size"
-                    android:text="You can change this in Settings."
+                    android:text="This can be changed later."
                     android:id="@+id/audioFeedbackHint"/>
             </LinearLayout>
             <LinearLayout

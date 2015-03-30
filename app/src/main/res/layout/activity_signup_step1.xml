@@ -5,7 +5,8 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@color/background"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.uihomies.androidfitness.SignupStep1">
+    tools:context="com.uihomies.androidfitness.SignupStep1"
+    android:padding="0dp">
     <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
         android:fitsSystemWindows="true">
         <LinearLayout
