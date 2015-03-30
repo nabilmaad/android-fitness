@@ -66,7 +66,8 @@
                     android:textColor="@color/signupInputFields"
                     android:ems="15"
                     android:id="@+id/name"
-                    android:background="@drawable/edit_text_design"/>
+                    android:background="@drawable/edit_text_design"
+                    android:layout_gravity="center_horizontal" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"

@@ -5,7 +5,8 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:background="@color/background"
-    tools:context="com.uihomies.androidfitness.SensorConnect">
+    tools:context="com.uihomies.androidfitness.SensorConnect"
+    android:padding="0dp">
 
     <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
         android:fitsSystemWindows="true">
@@ -36,7 +37,7 @@
                     android:layout_centerHorizontal="true"
                     android:textSize="@dimen/signupHeader_size"
                     android:textColor="@color/signupHeader"
-                    android:text="Connect Heart Sensor"
+                    android:text="CONNECT HEART SENSOR"
                     android:gravity="center"/>
             </RelativeLayout>
             <LinearLayout

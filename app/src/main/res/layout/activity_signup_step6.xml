@@ -31,13 +31,12 @@
                     android:id="@+id/signupTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginTop="@dimen/audioPreferenceHeader_topMargin"
-                    android:layout_centerHorizontal="true"
                     android:textSize="@dimen/audioPreferenceHeader_size"
                     android:text="AUDIO PREFERENCE"
                     android:textColor="@color/signupHeader"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
             </RelativeLayout>
             <LinearLayout
                 android:orientation="vertical"

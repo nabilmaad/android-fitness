@@ -44,17 +44,17 @@ public class SignupStep5 extends ActionBarActivity {
         if(athleticLevel == 1) {
             Button beginnerButton = (Button)findViewById(R.id.beginnerButton);
             beginnerButton.setActivated(true);
-            tv1.setText("Edit Info");
+            tv1.setText("EDIT INFO");
         } else if (athleticLevel == 2) {
             Button averageButton = (Button)findViewById(R.id.averageButton);
             averageButton.setActivated(true);
-            tv1.setText("Edit Info");
+            tv1.setText("EDIT INFO");
         } else if (athleticLevel == 3) {
             Button athleticButton = (Button)findViewById(R.id.athleticButton);
             athleticButton.setActivated(true);
-            tv1.setText("Edit Info");
+            tv1.setText("EDIT INFO");
         } else {
-            tv1.setText("Sign Up");
+            tv1.setText("SIGN UP");
         }
 
         // Setting next button text
@@ -169,7 +169,7 @@ public class SignupStep5 extends ActionBarActivity {
             // Load next activity (depending on whether it's signup or edit info)
             TextView title=(TextView)findViewById(R.id.signupTitle);
             Intent intent;
-            if(title.getText().equals("Sign Up"))
+            if(title.getText().equals("SIGN UP"))
                 intent = new Intent(SignupStep5.this, SignupStep6.class);
             else
                 intent = new Intent(SignupStep5.this, Profile.class);

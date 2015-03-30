@@ -56,10 +56,10 @@ public class SignupStep2 extends ActionBarActivity {
         }
 
         if(sharedpreferences.getInt("userAthleticLevel", 0) != 0) {
-            tv1.setText("Edit Info");
+            tv1.setText("EDIT INFO");
         }
         else {
-            tv1.setText("Sign Up");
+            tv1.setText("SIGN UP");
         }
     }
 
