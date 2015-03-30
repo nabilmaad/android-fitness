@@ -53,14 +53,6 @@ public class SensorConnect extends ActionBarActivity {
                     System.out.println("Heart Rate Info is "+ HeartRatetext);
                     if (tv != null)tv.setText(HeartRatetext);
                     break;
-
-                case INSTANT_SPEED:
-                    String InstantSpeedtext = msg.getData().getString("InstantSpeed");
-                    tv = (EditText)findViewById(R.id.labelInstantSpeed);
-                    if (tv != null)tv.setText(InstantSpeedtext);
-
-                    break;
-
             }
         }
 

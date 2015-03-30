@@ -6,6 +6,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.graphics.Typeface;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.ActionBarActivity;
@@ -33,6 +34,18 @@ public class Game extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
+
+        // Setting the fonts
+
+        // Stop Button
+        Button tv1=(Button)findViewById(R.id.stopButton);
+        Typeface face1=Typeface.createFromAsset(getAssets(),"fonts/Marker_Felt_Bold.ttf");
+        tv1.setTypeface(face1);
+
+        // Stop Button
+        TextView tv2=(TextView)findViewById(R.id.targetLabel);
+        Typeface face2=Typeface.createFromAsset(getAssets(),"fonts/Marker_Felt_Bold.ttf");
+        tv2.setTypeface(face2);
     }
 
     @Override
@@ -55,5 +68,11 @@ public class Game extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void stopButtonClick(View view) {
+        // Load next activity
+        Intent intent = new Intent(Game.this, Summary.class);
+        startActivity(intent);
     }
 }

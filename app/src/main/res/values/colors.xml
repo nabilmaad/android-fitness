@@ -9,4 +9,5 @@
     <color name="signupInputHint">#a9a9a9</color>
     <color name="signupAudioHint">#d4d4d1</color>
     <color name="profileAnswers">#000000</color>
+    <color name="greenGame">#29e83b</color>
 </resources>
