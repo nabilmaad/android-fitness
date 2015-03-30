@@ -23,8 +23,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/cloudImageView"
+        android:src="@drawable/cloud"
         android:layout_alignParentTop="true"
-        android:src="@drawable/cloud" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -90,12 +92,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tutorialButton"
-        android:src="@drawable/tutorialbutton"
         android:padding="0dp"
         android:background="@null"
         android:layout_alignTop="@+id/settingsButton"
         android:layout_alignLeft="@+id/launchButton"
         android:layout_alignStart="@+id/launchButton"
-        android:onClick="menuButtonClick" />
+        android:onClick="menuButtonClick"
+        android:src="@drawable/tutorialbutton" />
 
 </RelativeLayout>

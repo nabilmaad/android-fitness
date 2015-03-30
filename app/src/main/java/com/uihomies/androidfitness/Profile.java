@@ -27,40 +27,20 @@ public class Profile extends ActionBarActivity {
         // Setting the fonts
 
         // Profile header
-        TextView tv1=(TextView)findViewById(R.id.profileTitle);
-        Typeface face1=Typeface.createFromAsset(getAssets(),"fonts/Marker_Felt_Bold.ttf");
-        tv1.setTypeface(face1);
+        ((TextView) findViewById(R.id.profileTitle)).setTypeface(Typeface.createFromAsset(getAssets(),"fonts/DS_Marker_Felt.ttf"));
 
         // Profile elements
-        TextView tv2=(TextView)findViewById(R.id.genderLabel);
-        Typeface face2=Typeface.createFromAsset(getAssets(),"fonts/Marker_Felt.ttf");
-        tv2.setTypeface(face2);
-        TextView tv3=(TextView)findViewById(R.id.genderAnswer);
-        Typeface face3=Typeface.createFromAsset(getAssets(),"fonts/Marker_Felt.ttf");
-        tv3.setTypeface(face3);
-        TextView tv4=(TextView)findViewById(R.id.dobLabel);
-        Typeface face4=Typeface.createFromAsset(getAssets(),"fonts/Marker_Felt.ttf");
-        tv4.setTypeface(face4);
-        TextView tv5=(TextView)findViewById(R.id.dobAnswer);
-        Typeface face5=Typeface.createFromAsset(getAssets(),"fonts/Marker_Felt.ttf");
-        tv5.setTypeface(face5);
-        TextView tv6=(TextView)findViewById(R.id.weightLabel);
-        Typeface face6=Typeface.createFromAsset(getAssets(),"fonts/Marker_Felt.ttf");
-        tv6.setTypeface(face6);
-        TextView tv7=(TextView)findViewById(R.id.weightAnswer);
-        Typeface face7=Typeface.createFromAsset(getAssets(),"fonts/Marker_Felt.ttf");
-        tv7.setTypeface(face7);
-        TextView tv8=(TextView)findViewById(R.id.athleticLevelLabel);
-        Typeface face8=Typeface.createFromAsset(getAssets(),"fonts/Marker_Felt.ttf");
-        tv8.setTypeface(face8);
-        TextView tv9=(TextView)findViewById(R.id.athleticLevelAnswer);
-        Typeface face9=Typeface.createFromAsset(getAssets(),"fonts/Marker_Felt.ttf");
-        tv9.setTypeface(face9);
+        ((TextView) findViewById(R.id.genderLabel)).setTypeface(Typeface.createFromAsset(getAssets(),"fonts/DS_Marker_Felt.ttf"));
+        ((TextView) findViewById(R.id.genderAnswer)).setTypeface(Typeface.createFromAsset(getAssets(),"fonts/DS_Marker_Felt.ttf"));
+        ((TextView) findViewById(R.id.dobLabel)).setTypeface(Typeface.createFromAsset(getAssets(),"fonts/DS_Marker_Felt.ttf"));
+        ((TextView) findViewById(R.id.dobAnswer)).setTypeface(Typeface.createFromAsset(getAssets(),"fonts/DS_Marker_Felt.ttf"));
+        ((TextView) findViewById(R.id.weightLabel)).setTypeface(Typeface.createFromAsset(getAssets(),"fonts/DS_Marker_Felt.ttf"));
+        ((TextView) findViewById(R.id.weightAnswer)).setTypeface(Typeface.createFromAsset(getAssets(),"fonts/DS_Marker_Felt.ttf"));
+        ((TextView) findViewById(R.id.athleticLevelLabel)).setTypeface(Typeface.createFromAsset(getAssets(),"fonts/DS_Marker_Felt.ttf"));
+        ((TextView) findViewById(R.id.athleticLevelAnswer)).setTypeface(Typeface.createFromAsset(getAssets(),"fonts/DS_Marker_Felt.ttf"));
 
         // Next button
-        TextView tv10=(TextView)findViewById(R.id.editProfileButton);
-        Typeface face10=Typeface.createFromAsset(getAssets(),"fonts/DS_Marker_Felt.ttf");
-        tv10.setTypeface(face10);
+        ((TextView) findViewById(R.id.editProfileButton)).setTypeface(Typeface.createFromAsset(getAssets(),"fonts/DS_Marker_Felt.ttf"));
 
         // Setting profile answers and title
         SharedPreferences sharedpreferences = getSharedPreferences("appPreferences", Context.MODE_PRIVATE);
@@ -69,11 +49,11 @@ public class Profile extends ActionBarActivity {
         Date dob = new Date(sharedpreferences.getLong("userBirthday", 0));
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd MMMM yyyy");
 
-        tv1.setText(sharedpreferences.getString("userName", "Profile")); // Name
-        tv3.setText(gender[sharedpreferences.getInt("userGender", 0)]); // Gender
-        tv5.setText(dateFormat.format(dob)); // DOB
-        tv7.setText(sharedpreferences.getInt("userWeight", 0) + " Kg"); // Weight
-        tv9.setText(athleticLevel[sharedpreferences.getInt("userAthleticLevel", 0)]); // Athletic level
+        ((TextView) findViewById(R.id.profileTitle)).setText(sharedpreferences.getString("userName", "Profile")); // Name
+        ((TextView) findViewById(R.id.genderAnswer)).setText(gender[sharedpreferences.getInt("userGender", 0)]); // Gender
+        ((TextView) findViewById(R.id.dobAnswer)).setText(dateFormat.format(dob)); // DOB
+        ((TextView) findViewById(R.id.weightAnswer)).setText(sharedpreferences.getInt("userWeight", 0) + " Kg"); // Weight
+        ((TextView) findViewById(R.id.athleticLevelAnswer)).setText(athleticLevel[sharedpreferences.getInt("userAthleticLevel", 0)]); // Athletic level
     }
 
 

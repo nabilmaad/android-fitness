@@ -1,11 +1,13 @@
 package com.uihomies.androidfitness;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 import com.uihomies.androidfitness.R;
 
@@ -22,6 +24,9 @@ public class Tutorial1 extends ActionBarActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_tutorial1, menu);
+        TextView tv10=(TextView)findViewById(R.id.nextBut);
+        Typeface face10=Typeface.createFromAsset(getAssets(),"fonts/DS_Marker_Felt.ttf");
+        tv10.setTypeface(face10);
         return true;
     }
 

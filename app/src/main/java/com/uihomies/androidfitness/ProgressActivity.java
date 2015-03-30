@@ -1,9 +1,11 @@
 package com.uihomies.androidfitness;
 
+import android.graphics.Typeface;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 
 public class ProgressActivity extends ActionBarActivity {
@@ -12,6 +14,8 @@ public class ProgressActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_progress);
+        ((TextView) findViewById(R.id.restingTitle)).setTypeface(Typeface.createFromAsset(getAssets(),"fonts/DS_Marker_Felt.ttf"));
+        ((TextView) findViewById(R.id.progressTitle)).setTypeface(Typeface.createFromAsset(getAssets(),"fonts/DS_Marker_Felt.ttf"));
     }
 
 

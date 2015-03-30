@@ -69,7 +69,7 @@
                         android:layout_marginTop="@dimen/signupDistanceBetweenCloudAndQuestion"
                         android:textColor="@color/signupText"
                         android:textSize="@dimen/signupQuestions_size"
-                        android:text="Gender"
+                        android:text="GENDER:"
                         android:id="@+id/genderLabel"
                         />
                     <TextView
@@ -91,7 +91,7 @@
                         android:layout_marginTop="@dimen/signupDistanceBetweenCloudAndQuestion"
                         android:textColor="@color/signupText"
                         android:textSize="@dimen/signupQuestions_size"
-                        android:text="Date of birth"
+                        android:text="DATE OF BIRTH:"
                         android:id="@+id/dobLabel"
                         />
                     <TextView
@@ -113,7 +113,7 @@
                         android:layout_marginTop="@dimen/signupDistanceBetweenCloudAndQuestion"
                         android:textColor="@color/signupText"
                         android:textSize="@dimen/signupQuestions_size"
-                        android:text="Weight"
+                        android:text="WEIGHT:"
                         android:id="@+id/weightLabel"
                         />
                     <TextView
@@ -135,7 +135,7 @@
                         android:layout_marginTop="@dimen/signupDistanceBetweenCloudAndQuestion"
                         android:textColor="@color/signupText"
                         android:textSize="@dimen/signupQuestions_size"
-                        android:text="Athletic level"
+                        android:text="ATHLETIC LEVEL:"
                         android:id="@+id/athleticLevelLabel"
                         />
                     <TextView

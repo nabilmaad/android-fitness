@@ -22,32 +22,35 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="PROGRESS"
-        android:id="@+id/textView4"
+        android:id="@+id/progressTitle"
         android:textColor="#ff000000"
         android:textSize="40dp"
         android:textStyle="bold"
-        android:layout_marginTop="74dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="69dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="RESTING HEART RATE"
-        android:id="@+id/textView5"
+        android:id="@+id/restingTitle"
         android:textColor="#ffffffff"
         android:textStyle="bold"
+        android:textSize="30dp"
         android:layout_below="@+id/imageView"
         android:layout_centerHorizontal="true"
-        android:textSize="30dp" />
+        android:layout_marginTop="33dp" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imageView2"
-        android:layout_below="@+id/textView5"
-        android:layout_centerHorizontal="true"
         android:src="@drawable/graphsample"
-        android:padding="0dp" />
+        android:padding="0dp"
+        android:layout_marginTop="35dp"
+        android:layout_below="@+id/restingTitle"
+        android:layout_alignRight="@+id/restingTitle"
+        android:layout_alignEnd="@+id/restingTitle" />
 </RelativeLayout>

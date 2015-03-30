@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -30,6 +31,11 @@ public class SettingsActivity extends ActionBarActivity {
         setContentView(R.layout.activity_settings);
         deleteButton = (Button) findViewById(R.id.deleteProfileButton);
         profileWarning = (TextView) findViewById(R.id.profileWarning);
+        ((TextView) findViewById(R.id.profileWarning)).setTypeface(Typeface.createFromAsset(getAssets(),"fonts/DS_Marker_Felt.ttf"));
+        ((TextView) findViewById(R.id.deleteProfileButton)).setTypeface(Typeface.createFromAsset(getAssets(),"fonts/DS_Marker_Felt.ttf"));
+        ((TextView) findViewById(R.id.settingsTitle)).setTypeface(Typeface.createFromAsset(getAssets(),"fonts/DS_Marker_Felt.ttf"));
+        ((TextView) findViewById(R.id.audioTitle)).setTypeface(Typeface.createFromAsset(getAssets(),"fonts/DS_Marker_Felt.ttf"));
+        ((TextView) findViewById(R.id.audioDescription)).setTypeface(Typeface.createFromAsset(getAssets(),"fonts/DS_Marker_Felt.ttf"));
         profileWarning.setGravity(Gravity.CENTER);
         if(profileExists)
         {

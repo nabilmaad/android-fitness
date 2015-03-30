@@ -28,18 +28,18 @@
         android:onClick="deleteClicked"
         android:padding="0dp"
         android:layout_marginTop="75dp"
-        android:layout_below="@+id/textView3"
+        android:layout_below="@+id/audioDescription"
         android:layout_alignRight="@+id/audioCheckbox"
         android:layout_alignEnd="@+id/audioCheckbox"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_alignStart="@+id/textView2" />
+        android:layout_alignLeft="@+id/audioTitle"
+        android:layout_alignStart="@+id/audioTitle" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="SETTINGS"
-        android:id="@+id/textView"
+        android:id="@+id/settingsTitle"
         android:textColor="#ff000000"
         android:textSize="40dp"
         android:textStyle="bold"
@@ -54,37 +54,37 @@
         android:text="Erases all profile and progress information. Cannot be undone."
         android:id="@+id/profileWarning"
         android:layout_alignTop="@+id/deleteProfileButton"
-        android:layout_alignParentRight="false"
-        android:layout_alignParentEnd="true"
         android:layout_marginTop="59dp"
         android:textColor="#d4d1d1"
         android:textStyle="bold"
         android:textAlignment="center"
         android:onClick="deleteClicked"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentLeft="false"
         android:layout_alignParentTop="false"
         android:layout_alignParentBottom="false"
-        android:gravity="center" />
+        android:gravity="center"
+        android:layout_alignRight="@+id/audioCheckbox"
+        android:layout_alignEnd="@+id/audioCheckbox"
+        android:layout_alignLeft="@+id/deleteProfileButton"
+        android:layout_alignStart="@+id/deleteProfileButton" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="AUDIO FEEDBACK"
-        android:id="@+id/textView2"
+        android:id="@+id/audioTitle"
         android:textStyle="bold"
         android:textSize="30dp"
-        android:layout_above="@+id/textView3"
-        android:layout_alignRight="@+id/textView"
-        android:layout_alignEnd="@+id/textView" />
+        android:layout_above="@+id/audioDescription"
+        android:layout_alignRight="@+id/settingsTitle"
+        android:layout_alignEnd="@+id/settingsTitle" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Enables in-game voice prompts."
-        android:id="@+id/textView3"
+        android:id="@+id/audioDescription"
         android:textColor="#d4d1d1"
         android:textStyle="bold"
         android:textAlignment="center"
@@ -97,10 +97,10 @@
         android:layout_height="wrap_content"
         android:button="@drawable/checkbox_design"
         android:id="@+id/audioCheckbox"
-        android:layout_alignTop="@+id/textView2"
-        android:layout_toRightOf="@+id/textView3"
-        android:layout_toEndOf="@+id/textView3"
-        android:layout_above="@+id/textView3"
+        android:layout_alignTop="@+id/audioTitle"
+        android:layout_toRightOf="@+id/audioDescription"
+        android:layout_toEndOf="@+id/audioDescription"
+        android:layout_above="@+id/audioDescription"
         android:checked="false" />
 
 </RelativeLayout>

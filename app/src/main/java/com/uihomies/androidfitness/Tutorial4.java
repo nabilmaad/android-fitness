@@ -1,11 +1,13 @@
 package com.uihomies.androidfitness;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 import com.uihomies.androidfitness.R;
 
@@ -15,6 +17,9 @@ public class Tutorial4 extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tutorial4);
+        TextView tv10=(TextView)findViewById(R.id.nextBut);
+        Typeface face10=Typeface.createFromAsset(getAssets(),"fonts/DS_Marker_Felt.ttf");
+        tv10.setTypeface(face10);
     }
 
 
