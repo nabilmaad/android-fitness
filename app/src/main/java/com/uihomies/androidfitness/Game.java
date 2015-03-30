@@ -42,68 +42,72 @@ public class Game extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
-
-
-       // Hiding status and navigation bar
-        View decorView = getWindow().getDecorView();
-        int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                | View.SYSTEM_UI_FLAG_FULLSCREEN;
-        decorView.setSystemUiVisibility(uiOptions);
-
-        // Setting the fonts
-
-        // Stop Button
-        Button tv1=(Button)findViewById(R.id.stopButton);
-        Typeface face1=Typeface.createFromAsset(getAssets(),"fonts/Marker_Felt_Bold.ttf");
-        tv1.setTypeface(face1);
-
-        // Target Label
-        TextView tv2=(TextView)findViewById(R.id.targetLabel);
-        Typeface face2=Typeface.createFromAsset(getAssets(),"fonts/Marker_Felt_Bold.ttf");
-        tv2.setTypeface(face2);
-
-        // Heart rate Label
-        TextView tv3=(TextView)findViewById(R.id.heartRateLabel);
-        Typeface face3=Typeface.createFromAsset(getAssets(),"fonts/Marker_Felt.ttf");
-        tv3.setTypeface(face3);
-
-        // Simulation
-        Thread t = new Thread() {
-
-            @Override
-            public void run() {
-                try {
-                    while (!isInterrupted()) {
-                        Thread.sleep(500);
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                playWithTheHeartRate();
-                            }
-                        });
-                        if(iAmDone) {
-                            interrupt();
-                            // Load next activity
-                            Intent intent = new Intent(Game.this, Summary.class);
-                            startActivity(intent);
-                        }
-                    }
-                } catch (InterruptedException e) {
-                }
-            }
-        };
-
-        t.start();
     }
-    
+
    @Override
    public void onResume(){
        super.onResume();
+
+       // PASTED
+       myHeartRate = 80;
+       iterationsToWait = 0;
+       iterationsToWaitAgain = 0;
+       iAmDone = false;
+
        // Hiding status and navigation bar
        View decorView = getWindow().getDecorView();
        int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                | View.SYSTEM_UI_FLAG_FULLSCREEN;
        decorView.setSystemUiVisibility(uiOptions);
+
+       // Setting the fonts
+
+       // Stop Button
+       Button tv1=(Button)findViewById(R.id.stopButton);
+       Typeface face1=Typeface.createFromAsset(getAssets(),"fonts/Marker_Felt_Bold.ttf");
+       tv1.setTypeface(face1);
+
+       // Target Label
+       TextView tv2=(TextView)findViewById(R.id.targetLabel);
+       Typeface face2=Typeface.createFromAsset(getAssets(),"fonts/Marker_Felt_Bold.ttf");
+       tv2.setTypeface(face2);
+
+       // Heart rate Label
+       TextView tv3=(TextView)findViewById(R.id.heartRateLabel);
+       Typeface face3=Typeface.createFromAsset(getAssets(),"fonts/Marker_Felt.ttf");
+       tv3.setTypeface(face3);
+
+       // Simulation
+       Thread t = new Thread() {
+
+           @Override
+           public void run() {
+               System.out.println("Went in run");
+               try {
+                   while (!isInterrupted()) {
+                       System.out.println("Went in ! interrupted");
+                       Thread.sleep(500);
+                       runOnUiThread(new Runnable() {
+                           @Override
+                           public void run() {
+                               playWithTheHeartRate();
+                           }
+                       });
+                       if(iAmDone) {
+                           System.out.println("Went in iAmDone");
+                           interrupt();
+                           // Load next activity
+                           Intent intent = new Intent(Game.this, Summary.class);
+                           startActivity(intent);
+                       }
+                   }
+                   System.out.println("Went in AFTER ! interrupted");
+               } catch (InterruptedException e) {
+               }
+           }
+       };
+
+       t.start();
    }
 
     @Override
@@ -191,7 +195,7 @@ public class Game extends ActionBarActivity {
 
     public void stopButtonClick(View view) {
         // Load next activity
-        Intent intent = new Intent(Game.this, MainMenuActivity.class);
+        Intent intent = new Intent(Game.this, Summary.class);
         startActivity(intent);
     }
 }

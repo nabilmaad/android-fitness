@@ -272,5 +272,10 @@ public class SensorConnect extends ActionBarActivity {
         // Load next activity
         Intent intent = new Intent(SensorConnect.this, Game.class);
         startActivity(intent);
+
+        /*This disconnects listener from acting on received messages*/
+        _bt.removeConnectedEventListener(_NConnListener);
+					/*Close the communication with the device & throw an exception if failure*/
+        _bt.Close();
     }
 }
