@@ -41,6 +41,6 @@ public class Tutorial4 extends ActionBarActivity {
     }
 
     public void nextTutorial(View view) {
-        finish();
+        startActivity(new Intent(this, MainMenuActivity.class));
     }
 }
