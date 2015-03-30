@@ -42,10 +42,25 @@ public class Game extends ActionBarActivity {
         Typeface face1=Typeface.createFromAsset(getAssets(),"fonts/Marker_Felt_Bold.ttf");
         tv1.setTypeface(face1);
 
-        // Stop Button
+        // Target Label
         TextView tv2=(TextView)findViewById(R.id.targetLabel);
         Typeface face2=Typeface.createFromAsset(getAssets(),"fonts/Marker_Felt_Bold.ttf");
         tv2.setTypeface(face2);
+
+        // Heart rate Label
+        TextView tv3=(TextView)findViewById(R.id.heartRateLabel);
+        Typeface face3=Typeface.createFromAsset(getAssets(),"fonts/Marker_Felt.ttf");
+        tv3.setTypeface(face3);
+
+        // Simulation
+
+    }
+
+    public class SimulationThread extends Thread {
+
+        public void run(){
+            System.out.println("MyThread running");
+        }
     }
 
     @Override
