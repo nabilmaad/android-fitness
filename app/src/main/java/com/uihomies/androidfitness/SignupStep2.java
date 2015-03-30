@@ -47,16 +47,18 @@ public class SignupStep2 extends ActionBarActivity {
         if(gender == 1) {
             Button maleButton = (Button)findViewById(R.id.maleButton);
             maleButton.setActivated(true);
-            tv1.setText("Edit Info");
         } else if (gender == 2) {
             Button femaleButton = (Button)findViewById(R.id.femaleButton);
             femaleButton.setActivated(true);
-            tv1.setText("Edit Info");
         } else if (gender == 3) {
             Button noneButton = (Button)findViewById(R.id.noneButton);
             noneButton.setActivated(true);
+        }
+
+        if(sharedpreferences.getInt("userAthleticLevel", 0) != 0) {
             tv1.setText("Edit Info");
-        } else {
+        }
+        else {
             tv1.setText("Sign Up");
         }
     }

@@ -49,7 +49,12 @@ public class SignupStep4 extends ActionBarActivity {
             EditText weight = (EditText)findViewById(R.id.weight);
             weight.setText(Integer.toString(sharedpreferences.getInt("userWeight", 0)));
             tv1.setText("Edit Info");
-        } else {
+        }
+
+        if(sharedpreferences.getInt("userAthleticLevel", 0) != 0) {
+            tv1.setText("Edit Info");
+        }
+        else {
             tv1.setText("Sign Up");
         }
     }

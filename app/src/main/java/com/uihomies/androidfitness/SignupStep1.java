@@ -43,8 +43,12 @@ public class SignupStep1 extends Activity {
         if(!sharedpreferences.getString("userName", "").equals("")) {
             EditText name = (EditText)findViewById(R.id.name);
             name.setText(sharedpreferences.getString("userName", ""));
+        }
+
+        if(sharedpreferences.getInt("userAthleticLevel", 0) != 0) {
             tv1.setText("Edit Info");
-        } else {
+        }
+        else {
             tv1.setText("Sign Up");
         }
     }

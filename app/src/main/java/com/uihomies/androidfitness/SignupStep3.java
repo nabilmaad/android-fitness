@@ -140,7 +140,12 @@ public class SignupStep3 extends ActionBarActivity {
             month.setText(String.format("%02d", cal.get(Calendar.MONTH) + 1));
             year.setText(Integer.toString(cal.get(Calendar.YEAR)));
             tv1.setText("Edit Info");
-        } else {
+        }
+
+        if(sharedpreferences.getInt("userAthleticLevel", 0) != 0) {
+            tv1.setText("Edit Info");
+        }
+        else {
             tv1.setText("Sign Up");
         }
     }
