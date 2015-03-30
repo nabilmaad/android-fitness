@@ -17,6 +17,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import zephyr.android.HxMBT.*;
@@ -33,6 +34,9 @@ public class Game extends ActionBarActivity {
 
     public final String TAG = "Game Activity";
     public static int myHeartRate = 80;
+    public static int iterationsToWait = 0;
+    public static int iterationsToWaitAgain = 0;
+    public static boolean iAmDone = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,13 +74,19 @@ public class Game extends ActionBarActivity {
             public void run() {
                 try {
                     while (!isInterrupted()) {
-                        Thread.sleep(1000);
+                        Thread.sleep(500);
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                updateTextView();
+                                playWithTheHeartRate();
                             }
                         });
+                        if(iAmDone) {
+                            interrupt();
+                            // Load next activity
+                            Intent intent = new Intent(Game.this, Summary.class);
+                            startActivity(intent);
+                        }
                     }
                 } catch (InterruptedException e) {
                 }
@@ -85,7 +95,7 @@ public class Game extends ActionBarActivity {
 
         t.start();
     }
-
+    
    @Override
    public void onResume(){
        super.onResume();
@@ -106,13 +116,55 @@ public class Game extends ActionBarActivity {
         decorView.setSystemUiVisibility(uiOptions);
     }
 
-    public void updateTextView() {
-        TextView tv3=(TextView)findViewById(R.id.heartRateLabel);
-        tv3.setText(Integer.toString(myHeartRate));
-        while(myHeartRate <= 100){
+    public void targetReached() {
+        ImageView iv = (ImageView)findViewById(R.id.rocketImage);
+        iv.setImageResource(R.drawable.bigrocketgreen);
+        TextView tv=(TextView)findViewById(R.id.targetLabel);
+        tv.setText("HOLD AT 100 BPM");
+    }
+
+    public void playWithTheHeartRate() {
+        if(myHeartRate > 100) {
+            targetReached();
+            iterationsToWait++;
+            if(iterationsToWait > 10) {
+                continueHeartSimulation();
+            }
+        } else {
+            TextView tv = (TextView) findViewById(R.id.heartRateLabel);
+            tv.setText(Integer.toString(myHeartRate));
             myHeartRate++;
         }
+    }
 
+    public void continueHeartSimulation() {
+        if(myHeartRate > 120) {
+            secondTargetReached();
+            iterationsToWaitAgain++;
+            if(iterationsToWaitAgain > 10) {
+                finishIt();
+            }
+        }
+        else {
+            ImageView iv = (ImageView) findViewById(R.id.rocketImage);
+            iv.setImageResource(R.drawable.bigrocketblue);
+            TextView tv = (TextView) findViewById(R.id.targetLabel);
+            tv.setText("120 BPM");
+            TextView tv1 = (TextView) findViewById(R.id.heartRateLabel);
+            tv1.setText(Integer.toString(myHeartRate));
+            myHeartRate++;
+        }
+    }
+
+    public void secondTargetReached() {
+        ImageView iv = (ImageView)findViewById(R.id.rocketImage);
+        iv.setImageResource(R.drawable.bigrocketgreen);
+        TextView tv=(TextView)findViewById(R.id.targetLabel);
+        tv.setText("HOLD AT 120 BPM");
+    }
+
+    public void finishIt() {
+        iAmDone = true;
     }
 
     @Override
@@ -139,7 +191,7 @@ public class Game extends ActionBarActivity {
 
     public void stopButtonClick(View view) {
         // Load next activity
-        Intent intent = new Intent(Game.this, Summary.class);
+        Intent intent = new Intent(Game.this, MainMenuActivity.class);
         startActivity(intent);
     }
 }
