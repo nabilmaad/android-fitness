@@ -6,43 +6,36 @@
     android:background="@color/background"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.uihomies.androidfitness.SignupStep1">
-
     <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
         android:fitsSystemWindows="true">
-
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:weightSum="1">
-
             <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.00">
-
                 <ImageView
-                    android:layout_width="wrap_content"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/cloudImageView"
+                    android:id="@+id/cloudImage"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
                     android:src="@drawable/cloud"
                     android:contentDescription="cloudImage" />
-
                 <TextView
                     android:id="@+id/signupTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
                     android:layout_marginTop="@dimen/signupHeader_topMargin"
+                    android:layout_centerHorizontal="true"
                     android:textSize="@dimen/signupHeader_size"
-                    android:textColor="@color/signupHeader"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true" />
+                    android:textColor="@color/signupHeader" />
             </RelativeLayout>
-
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="fill_parent"
@@ -51,7 +44,6 @@
                 android:weightSum="1"
                 android:layout_marginLeft="@dimen/signupSideMargin"
                 android:layout_marginRight="@dimen/signupSideMargin">
-
                 <TextView
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
@@ -62,7 +54,6 @@
                     android:gravity="center"
                     android:id="@+id/nameLabel"
                     />
-
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="@dimen/signupEditTextHeight"
@@ -74,9 +65,7 @@
                     android:ems="15"
                     android:id="@+id/name"
                     android:background="@drawable/edit_text_design"/>
-
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dip"
@@ -86,7 +75,6 @@
                 android:layout_marginBottom="@dimen/signupSideMargin"
                 android:gravity="center|bottom"
                 android:orientation="vertical" >
-
                 <Button
                     android:id="@+id/nextButton"
                     android:layout_width="fill_parent"
@@ -98,11 +86,6 @@
                     android:text="@string/signupNext"
                     android:onClick="nextButtonClick"/>
             </LinearLayout>
-
         </LinearLayout>
-
-
-
     </FrameLayout>
-
 </RelativeLayout>

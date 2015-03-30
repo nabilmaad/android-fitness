@@ -63,11 +63,6 @@
             android:name=".MainMenuActivity"
             android:label="@string/title_activity_main_menu"
             android:screenOrientation="portrait" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".SettingsActivity"
@@ -93,6 +88,15 @@
         <activity
             android:name=".Tutorial4"
             android:label="@string/title_activity_tutorial4" >
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 
