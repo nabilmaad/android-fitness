@@ -9,6 +9,7 @@ import android.content.IntentFilter;
 import android.graphics.Typeface;
 import android.os.Handler;
 import android.os.Message;
+import android.speech.tts.TextToSpeech;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -27,16 +28,18 @@ import com.uihomies.androidfitness.R;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.Locale;
 import java.util.Set;
 import java.util.TimerTask;
 
-public class Game extends ActionBarActivity {
+public class Game extends ActionBarActivity implements TextToSpeech.OnInitListener {
 
     public final String TAG = "Game Activity";
     public static int myHeartRate = 80;
     public static int iterationsToWait = 0;
     public static int iterationsToWaitAgain = 0;
     public static boolean iAmDone = false;
+    private TextToSpeech tts;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -124,7 +127,9 @@ public class Game extends ActionBarActivity {
         ImageView iv = (ImageView)findViewById(R.id.rocketImage);
         iv.setImageResource(R.drawable.bigrocketgreen);
         TextView tv=(TextView)findViewById(R.id.targetLabel);
-        tv.setText("HOLD AT 100 BPM");
+        String msg = "HOLD AT 100 BPM";
+        tv.setText(msg);
+        speakOut(msg);
     }
 
     public void playWithTheHeartRate() {
@@ -197,5 +202,27 @@ public class Game extends ActionBarActivity {
         // Load next activity
         Intent intent = new Intent(Game.this, Summary.class);
         startActivity(intent);
+    }
+
+    @Override
+    public void onInit(int status) {
+        if (status == TextToSpeech.SUCCESS) {
+
+            int result = tts.setLanguage(Locale.CANADA);
+
+            if (result == TextToSpeech.LANG_MISSING_DATA
+                    || result == TextToSpeech.LANG_NOT_SUPPORTED) {
+                Log.e("TTS", "This Language is not supported");
+            } else {
+                speakOut("");
+            }
+
+        } else {
+            Log.e("TTS", "Initilization Failed!");
+        }
+    }
+
+    private void speakOut(String msg) {
+        tts.speak(msg, TextToSpeech.QUEUE_FLUSH, null);
     }
 }
