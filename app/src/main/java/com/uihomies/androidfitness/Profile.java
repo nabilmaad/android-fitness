@@ -22,7 +22,7 @@ public class Profile extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
+        setContentView(R.layout.activity_profile);heigh
 
         // Setting the fonts
 
@@ -53,6 +53,7 @@ public class Profile extends ActionBarActivity {
         ((TextView) findViewById(R.id.genderAnswer)).setText(gender[sharedpreferences.getInt("userGender", 0)]); // Gender
         ((TextView) findViewById(R.id.dobAnswer)).setText(dateFormat.format(dob)); // DOB
         ((TextView) findViewById(R.id.weightAnswer)).setText(sharedpreferences.getInt("userWeight", 0) + " Kg"); // Weight
+        ((TextView) findViewById(R.id.heightAnswer)).setText(sharedpreferences.getInt("userHeight", 0) + " Kg"); // Height
         ((TextView) findViewById(R.id.athleticLevelAnswer)).setText(athleticLevel[sharedpreferences.getInt("userAthleticLevel", 0)]); // Athletic level
     }
 
