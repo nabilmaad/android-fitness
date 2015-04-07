@@ -39,6 +39,8 @@ public class Game extends ActionBarActivity implements TextToSpeech.OnInitListen
     public static int iterationsToWait = 0;
     public static int iterationsToWaitAgain = 0;
     public static boolean iAmDone = false;
+    public static boolean startedSpeaking1 = false;
+    public static boolean startedSpeaking2 = false;
     private TextToSpeech tts;
 
     @Override
@@ -141,7 +143,10 @@ public class Game extends ActionBarActivity implements TextToSpeech.OnInitListen
         TextView tv=(TextView)findViewById(R.id.targetLabel);
         String msg = "HOLD AT 100 BPM";
         tv.setText(msg);
-        speakOut(msg);
+        if(!startedSpeaking1) {
+            speakOut(msg);
+            startedSpeaking1 = true;
+        }
     }
 
     public void playWithTheHeartRate() {
@@ -182,6 +187,12 @@ public class Game extends ActionBarActivity implements TextToSpeech.OnInitListen
         iv.setImageResource(R.drawable.bigrocketgreen);
         TextView tv=(TextView)findViewById(R.id.targetLabel);
         tv.setText("HOLD AT 120 BPM");
+        String msg = "HOLD AT 120 BPM";
+        tv.setText(msg);
+        if(!startedSpeaking2) {
+            speakOut(msg);
+            startedSpeaking2 = true;
+        }
     }
 
     public void finishIt() {
