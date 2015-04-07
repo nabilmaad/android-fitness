@@ -103,11 +103,11 @@ public class SignupStep4 extends ActionBarActivity {
             if(!weightSwitch.isChecked()) // Already in cm
                 editor.putInt("userHeight", Integer.parseInt(weightString));
             else // Convert inches to cm
-                editor.putInt("userHeight", (int)(Double.parseDouble(weightString) * 2.54));
+                editor.putInt("userHeight", (int)(Double.parseDouble(weightString) / 2.2));
             editor.commit();
 
             // Load next activity
-            Intent intent = new Intent(SignupStep4.this, SignupStep5.class);
+            Intent intent = new Intent(SignupStep4.this, SignupStepX.class);
             startActivity(intent);
         }
     }

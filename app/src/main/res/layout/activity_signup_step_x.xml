@@ -77,7 +77,7 @@
                         android:textColor="@color/signupInputFields"
                         android:ems="8"
                         android:maxLength="3"
-                        android:id="@+id/weight"
+                        android:id="@+id/height"
                         android:background="@drawable/edit_text_design"
                         android:layout_toLeftOf="@+id/cmLabel"
                         android:layout_toStartOf="@+id/cmLabel" />
