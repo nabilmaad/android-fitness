@@ -6,6 +6,7 @@
     <!-- Added by us -->
     <string name="nameHint"><i> i.e. John</i></string>
     <string name="weightHint"><i> i.e. 100</i></string>
+    <string name="heightHint"><i> i.e. 152</i></string>
     <string name="signupNext">Next ></string>
     <string name="signupDone">Done</string>
     <string name="editProfile">Edit</string>
@@ -31,5 +32,6 @@
     <string name="title_activity_tutorial3">Tutorial3</string>
     <string name="title_activity_tutorial4">Tutorial4</string>
     <string name="title_activity_sensor_connect">SensorConnect</string>
+    <string name="title_activity_signup_step_x">SignupStepX</string>
 
 </resources>

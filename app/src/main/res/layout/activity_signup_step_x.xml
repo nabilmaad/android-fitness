@@ -5,7 +5,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:background="@color/background"
-    tools:context="com.uihomies.androidfitness.SignupStep2"
+    tools:context="com.uihomies.androidfitness.SignupStep4"
     android:padding="0dp">
 
     <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
@@ -19,18 +19,18 @@
 
             <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.00">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/cloudImageView"
                     android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
                     android:src="@drawable/cloud"
-                    android:contentDescription="cloudImage" />
+                    android:contentDescription="cloudImage"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
 
                 <TextView
                     android:id="@+id/signupTitle"
@@ -40,14 +40,13 @@
                     android:layout_marginTop="@dimen/signupHeader_topMargin"
                     android:layout_centerHorizontal="true"
                     android:textSize="@dimen/signupHeader_size"
-                    android:textColor="@color/signupHeader"/>
+                    android:textColor="@color/signupHeader" />
             </RelativeLayout>
 
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
                 android:weightSum="1"
                 android:layout_marginLeft="@dimen/signupSideMargin"
                 android:layout_marginRight="@dimen/signupSideMargin">
@@ -58,10 +57,9 @@
                     android:layout_marginTop="@dimen/signupDistanceBetweenCloudAndQuestion"
                     android:textColor="@color/signupText"
                     android:textSize="@dimen/signupQuestions_size"
-                    android:text="What is your gender?"
-                    android:gravity="center"
-                    android:id="@+id/genderLabel"
-                    />
+                    android:text="What is your height?"
+                    android:id="@+id/heightLabel"
+                    android:gravity="center" />
 
                 <RelativeLayout
                     android:orientation="horizontal"
@@ -69,29 +67,50 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/signupDistanceBetweenQuestionAndAnswer">
 
-                    <Button
-                        android:id="@+id/maleButton"
+                    <EditText
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="@dimen/signupEditTextHeight"
                         android:layout_alignParentLeft="true"
-                        android:background="@drawable/male"
-                        android:onClick="maleButtonClick"/>
+                        android:inputType="number"
+                        android:hint="@string/heightHint"
+                        android:textColorHint="#a9a9a9"
+                        android:textColor="@color/signupInputFields"
+                        android:ems="8"
+                        android:maxLength="3"
+                        android:id="@+id/weight"
+                        android:background="@drawable/edit_text_design"
+                        android:layout_toLeftOf="@+id/cmLabel"
+                        android:layout_toStartOf="@+id/cmLabel" />
 
-                    <Button
-                        android:id="@+id/femaleButton"
+                    <TextView
+                        android:id="@+id/cmLabel"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
-                        android:background="@drawable/female"
-                        android:onClick="femaleButtonClick"/>
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="110dp"
+                        android:textSize="30dp"
+                        android:text="cm"
+                        android:textColor="@color/signupText"/>
 
-                    <Button
-                        android:id="@+id/otherButton"
+                    <Switch
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:switchMinWidth="56dp"
+                        android:layout_centerInParent="true"
                         android:layout_alignParentRight="true"
-                        android:background="@drawable/none"
-                        android:onClick="otherButtonClick"/>
+                        android:layout_marginRight="50dp"
+                        android:id="@+id/heightSwitch" />
+
+                    <TextView
+                        android:id="@+id/inchesLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentRight="true"
+                        android:textSize="30dp"
+                        android:text="inches"
+                        android:textColor="@color/signupText"/>
 
                 </RelativeLayout>
 

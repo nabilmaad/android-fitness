@@ -100,10 +100,10 @@ public class SignupStep4 extends ActionBarActivity {
             // Save user's weight in Kg
             SharedPreferences sharedpreferences = getSharedPreferences("appPreferences", Context.MODE_PRIVATE);
             SharedPreferences.Editor editor = sharedpreferences.edit();
-            if(!weightSwitch.isChecked()) // Already in Kg
-                editor.putInt("userWeight", Integer.parseInt(weightString));
-            else // Convert Lbs to Kg
-                editor.putInt("userWeight", (int)(Double.parseDouble(weightString) / 2.2));
+            if(!weightSwitch.isChecked()) // Already in cm
+                editor.putInt("userHeight", Integer.parseInt(weightString));
+            else // Convert inches to cm
+                editor.putInt("userHeight", (int)(Double.parseDouble(weightString) * 2.54));
             editor.commit();
 
             // Load next activity

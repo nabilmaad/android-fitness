@@ -51,8 +51,8 @@ public class SignupStep2 extends ActionBarActivity {
             Button femaleButton = (Button)findViewById(R.id.femaleButton);
             femaleButton.setActivated(true);
         } else if (gender == 3) {
-            Button noneButton = (Button)findViewById(R.id.noneButton);
-            noneButton.setActivated(true);
+            Button otherButton = (Button)findViewById(R.id.otherButton);
+            otherButton.setActivated(true);
         }
 
         if(sharedpreferences.getInt("userAthleticLevel", 0) != 0) {
@@ -92,9 +92,9 @@ public class SignupStep2 extends ActionBarActivity {
 
         // Deactivate the other 2
         Button femaleButton = (Button) findViewById(R.id.femaleButton);
-        Button noneButton = (Button) findViewById(R.id.noneButton);
+        Button otherButton = (Button) findViewById(R.id.otherButton);
         femaleButton.setActivated(false);
-        noneButton.setActivated(false);
+        otherButton.setActivated(false);
     }
 
     public void femaleButtonClick(View view) {
@@ -103,14 +103,14 @@ public class SignupStep2 extends ActionBarActivity {
 
         // Deactivate the other 2
         Button maleButton = (Button) findViewById(R.id.maleButton);
-        Button noneButton = (Button) findViewById(R.id.noneButton);
+        Button otherButton = (Button) findViewById(R.id.otherButton);
         maleButton.setActivated(false);
-        noneButton.setActivated(false);
+        otherButton.setActivated(false);
     }
 
-    public void noneButtonClick(View view) {
-        Button noneButton = (Button) findViewById(R.id.noneButton);
-        noneButton.setActivated(true);
+    public void otherButtonClick(View view) {
+        Button otherButton = (Button) findViewById(R.id.otherButton);
+        otherButton.setActivated(true);
 
         // Deactivate the other 2
         Button maleButton = (Button) findViewById(R.id.maleButton);
@@ -133,8 +133,8 @@ public class SignupStep2 extends ActionBarActivity {
                 gender = 2;
             else {
                 // None
-                Button noneButton = (Button) findViewById(R.id.noneButton);
-                if(noneButton.isActivated())
+                Button otherButton = (Button) findViewById(R.id.otherButton);
+                if(otherButton.isActivated())
                     gender = 3;
             }
         }

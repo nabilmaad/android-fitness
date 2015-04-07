@@ -52,7 +52,7 @@
         <activity
             android:name=".Game"
             android:label="@string/title_activity_game"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".Summary"
@@ -92,8 +92,6 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main" >
-
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -103,6 +101,10 @@
         <activity
             android:name=".SensorConnect"
             android:label="@string/title_activity_sensor_connect" >
+        </activity>
+        <activity
+            android:name=".SignupStepX"
+            android:label="@string/title_activity_signup_step_x" >
         </activity>
     </application>
 

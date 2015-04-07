@@ -1,4 +1,4 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_activated="true" android:drawable="@drawable/nonepressed"/>
-    <item android:state_activated="false" android:drawable="@drawable/noneunpressed"/>
+    <item android:state_activated="true" android:drawable="@drawable/otherpressed"/>
+    <item android:state_activated="false" android:drawable="@drawable/otherunpressed"/>
 </selector>
