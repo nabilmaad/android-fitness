@@ -22,7 +22,7 @@ public class Profile extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);heigh
+        setContentView(R.layout.activity_profile);
 
         // Setting the fonts
 
@@ -36,6 +36,8 @@ public class Profile extends ActionBarActivity {
         ((TextView) findViewById(R.id.dobAnswer)).setTypeface(Typeface.createFromAsset(getAssets(),"fonts/DS_Marker_Felt.ttf"));
         ((TextView) findViewById(R.id.weightLabel)).setTypeface(Typeface.createFromAsset(getAssets(),"fonts/DS_Marker_Felt.ttf"));
         ((TextView) findViewById(R.id.weightAnswer)).setTypeface(Typeface.createFromAsset(getAssets(),"fonts/DS_Marker_Felt.ttf"));
+        ((TextView) findViewById(R.id.heightLabel)).setTypeface(Typeface.createFromAsset(getAssets(),"fonts/DS_Marker_Felt.ttf"));
+        ((TextView) findViewById(R.id.heightAnswer)).setTypeface(Typeface.createFromAsset(getAssets(),"fonts/DS_Marker_Felt.ttf"));
         ((TextView) findViewById(R.id.athleticLevelLabel)).setTypeface(Typeface.createFromAsset(getAssets(),"fonts/DS_Marker_Felt.ttf"));
         ((TextView) findViewById(R.id.athleticLevelAnswer)).setTypeface(Typeface.createFromAsset(getAssets(),"fonts/DS_Marker_Felt.ttf"));
 
@@ -53,7 +55,7 @@ public class Profile extends ActionBarActivity {
         ((TextView) findViewById(R.id.genderAnswer)).setText(gender[sharedpreferences.getInt("userGender", 0)]); // Gender
         ((TextView) findViewById(R.id.dobAnswer)).setText(dateFormat.format(dob)); // DOB
         ((TextView) findViewById(R.id.weightAnswer)).setText(sharedpreferences.getInt("userWeight", 0) + " Kg"); // Weight
-        ((TextView) findViewById(R.id.heightAnswer)).setText(sharedpreferences.getInt("userHeight", 0) + " Kg"); // Height
+        ((TextView) findViewById(R.id.heightAnswer)).setText(sharedpreferences.getInt("userHeight", 0) + " cm"); // Height
         ((TextView) findViewById(R.id.athleticLevelAnswer)).setText(athleticLevel[sharedpreferences.getInt("userAthleticLevel", 0)]); // Athletic level
     }
 

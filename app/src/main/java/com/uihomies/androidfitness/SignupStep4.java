@@ -101,9 +101,9 @@ public class SignupStep4 extends ActionBarActivity {
             SharedPreferences sharedpreferences = getSharedPreferences("appPreferences", Context.MODE_PRIVATE);
             SharedPreferences.Editor editor = sharedpreferences.edit();
             if(!weightSwitch.isChecked()) // Already in cm
-                editor.putInt("userHeight", Integer.parseInt(weightString));
+                editor.putInt("userWeight", Integer.parseInt(weightString));
             else // Convert inches to cm
-                editor.putInt("userHeight", (int)(Double.parseDouble(weightString) / 2.2));
+                editor.putInt("userWeight", (int)(Double.parseDouble(weightString) / 2.2));
             editor.commit();
 
             // Load next activity
